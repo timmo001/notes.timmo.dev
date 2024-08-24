@@ -20,6 +20,8 @@ export const metadata: Metadata = {
         url: "/api/og",
       },
     ],
+    siteName: "Notes",
+    url: "https://notes.timmo.dev",
   },
 };
 
