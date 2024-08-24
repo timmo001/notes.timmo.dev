@@ -66,6 +66,7 @@
     "initVersion": "7.37.0"
   },
   "trustedDependencies": [
-    "@clerk/shared"
+    "@clerk/shared",
+    "esbuild"
   ]
 }
