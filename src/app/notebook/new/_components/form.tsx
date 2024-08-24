@@ -18,16 +18,19 @@ import {
 } from "~/components/ui/form";
 import { Input } from "~/components/ui/input";
 import { CreateNotebookSchema } from "~/server/api/routers/notebook";
+import { useRouter } from "next/navigation";
 
 export function NewNotebookForm() {
   const auth = useAuth();
-  const createNotebook = api.notebook.createNotebook.useMutation({
+  const router = useRouter();
+  const utils = api.useUtils();
+
+  const createNotebook = api.notebook.create.useMutation({
     onSuccess: async () => {
       await utils.notebook.invalidate();
       router.replace("/");
     },
   });
-  const utils = api.useUtils();
 
   const form = useForm<z.infer<typeof CreateNotebookSchema>>({
     resolver: zodResolver(CreateNotebookSchema),
