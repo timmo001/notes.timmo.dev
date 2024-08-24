@@ -3,7 +3,7 @@ import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 import { notebooks } from "~/server/db/schema";
 
-export const CreateNotebookSchema = z.object({
+const CreateNotebookSchema = z.object({
   title: z
     .string()
     .min(1, {

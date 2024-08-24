@@ -1,8 +1,9 @@
 "use client";
 
-import { type z } from "zod";
 import { useAuth } from "@clerk/nextjs";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { api } from "~/trpc/react";
@@ -16,9 +17,20 @@ import {
   FormLabel,
   FormMessage,
 } from "~/components/ui/form";
+
 import { Input } from "~/components/ui/input";
-import { CreateNotebookSchema } from "~/server/api/routers/notebook";
-import { useRouter } from "next/navigation";
+
+const FormSchema = z.object({
+  title: z
+    .string()
+    .min(1, {
+      message: "Title must be at least 1 character.",
+    })
+    .max(256, {
+      message: "Title must be at most 256 characters.",
+    }),
+  description: z.string().optional(),
+});
 
 export function NewNotebookForm() {
   const auth = useAuth();
@@ -32,15 +44,15 @@ export function NewNotebookForm() {
     },
   });
 
-  const form = useForm<z.infer<typeof CreateNotebookSchema>>({
-    resolver: zodResolver(CreateNotebookSchema),
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
     defaultValues: {
       title: "",
       description: "",
     },
   });
 
-  function onSubmit(data: z.infer<typeof CreateNotebookSchema>) {
+  function onSubmit(data: z.infer<typeof FormSchema>) {
     console.log("New notebook:", data);
     if (!auth.userId) {
       console.error("User is not authenticated");
