@@ -24,7 +24,7 @@ export const notebooks = mySchema.table(
     id: serial("id").primaryKey(),
     title: varchar("title", { length: 256 }),
     description: varchar("description", {}),
-    userId: varchar("user_id", { length: 36 }),
+    userId: varchar("user_id", {}),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
