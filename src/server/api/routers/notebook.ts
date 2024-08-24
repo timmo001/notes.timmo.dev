@@ -4,18 +4,9 @@ import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 import { notebooks } from "~/server/db/schema";
 
 const CreateNotebookSchema = z.object({
-  title: z
-    .string()
-    .min(1, {
-      message: "Title must be at least 1 character.",
-    })
-    .max(256, {
-      message: "Title must be at most 256 characters.",
-    }),
+  title: z.string().min(1).max(256),
   description: z.string().optional(),
-  userId: z.string().min(1, {
-    message: "User ID must be at least 1 character.",
-  }),
+  userId: z.string().min(1),
 });
 
 // export const GetNotebookSchema = CreateNotebookSchema.extend({});
@@ -31,10 +22,13 @@ export const notebookRouter = createTRPCRouter({
       });
     }),
 
-  // getLatest: publicProcedure.query(async ({ ctx }) => {
-  //   const post = await ctx.db.query.posts.findFirst({
-  //     orderBy: (posts, { desc }) => [desc(posts.createdAt)],
-  //   });
-  //   return post ?? null;
-  // }),
+  getAll: publicProcedure
+    .input(z.object({ userId: z.string().min(1) }))
+    .query(async ({ ctx, input }) => {
+      const post = await ctx.db.query.notebooks.findMany({
+        where: (notebooks, { eq }) => eq(notebooks.userId, input.userId),
+        orderBy: (notebooks, { desc }) => [desc(notebooks.createdAt)],
+      });
+      return post ?? null;
+    }),
 });

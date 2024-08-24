@@ -1,14 +1,18 @@
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import Link from "next/link";
 
+import { api } from "~/trpc/server";
 import { TextFadeInUpGrab } from "~/components/animations/text";
-
-// import { api } from "~/trpc/server";
+import { currentUser } from "@clerk/nextjs/server";
+import { notFound } from "next/navigation";
 
 export default async function Home() {
-  // const hello = await api.post.hello({ text: "from tRPC" });
+  const user = await currentUser();
+  if (!user) notFound();
 
-  // void api.post.getLatest.prefetch();
+  const notebooks = await api.notebook.getAll({ userId: user.id });
+
+  void api.notebook.getAll.prefetch({ userId: user.id });
 
   return (
     <>
@@ -28,15 +32,16 @@ export default async function Home() {
             <h2 className="text-3xl font-bold">Notebooks</h2>
           </TextFadeInUpGrab>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
-              href={""}
-            >
-              <h3 className="text-2xl font-bold">Name</h3>
-              <div className="text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </div>
-            </Link>
+            {notebooks.map((notebook) => (
+              <Link
+                key={notebook.id}
+                className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
+                href={`/notebook/${notebook.id}`}
+              >
+                <h3 className="text-2xl font-bold">{notebook.title}</h3>
+                <div className="text-lg">{notebook.description ?? ""}</div>
+              </Link>
+            ))}
             <Link
               className="flex max-w-xs flex-col items-center justify-center rounded-xl bg-white/10 p-4 py-8 hover:bg-white/20"
               href="/notebook/new"
