@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: "Notes",
   description: "A simple notes app",
   icons: [{ rel: "icon", url: "/icon" }],
+  metadataBase: new URL("https://notes.timmo.dev"),
   openGraph: {
     images: [
       {
