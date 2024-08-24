@@ -14,6 +14,13 @@ export const metadata: Metadata = {
   title: "Notes",
   description: "A simple notes app",
   icons: [{ rel: "icon", url: "/icon" }],
+  openGraph: {
+    images: [
+      {
+        url: "/api/og",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
