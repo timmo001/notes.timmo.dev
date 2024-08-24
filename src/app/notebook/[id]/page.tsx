@@ -36,7 +36,7 @@ export default async function Notebook({ params }: { params: { id: string } }) {
       <section className="items-between flex w-full flex-1 flex-row justify-between rounded-xl border shadow-md">
         <Navigation />
         <div className="flex flex-1 flex-col rounded-xl">
-          <textarea className="h-full w-full rounded-xl bg-gray-950" />
+          <textarea className="h-full w-full rounded-e-xl bg-gray-950" />
         </div>
       </section>
     </>
