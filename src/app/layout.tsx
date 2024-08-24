@@ -9,11 +9,13 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import { dark } from '@clerk/themes'
 
 import { TRPCReactProvider } from "~/trpc/react";
 import { ThemeProvider } from "~/components/theme-provider";
 import { HydrateClient } from "~/trpc/server";
 import { ModeToggle } from "~/components/theme-toggle";
+import { Button } from "~/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Notes",
@@ -25,7 +27,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+      }}
+    >
       <html lang="en" className={`${GeistSans.variable}`}>
         <body>
           <ThemeProvider
@@ -36,17 +42,22 @@ export default function RootLayout({
           >
             <TRPCReactProvider>
               <HydrateClient>
-                <header className="flex w-full items-center justify-between bg-gradient-to-r from-[#2e026d] to-[#15162c] p-4">
-                  <h1 className="text-2xl font-bold">Notes</h1>
+                <header className="flex w-full items-center justify-between gap-2 p-4">
+                  <h1 className="flex-1 text-2xl font-bold">Notes</h1>
+                  <ModeToggle />
                   <SignedIn>
                     <UserButton />
                   </SignedIn>
                   <SignedOut>
-                    <SignInButton />
+                    <Button
+                      className="transform rounded-md bg-violet-800 bg-opacity-80 px-4 py-2 text-white shadow-lg drop-shadow-2xl transition duration-300 hover:scale-105 hover:bg-violet-800"
+                      variant="outline"
+                    >
+                      <SignInButton mode="modal" />
+                    </Button>
                   </SignedOut>
-                  <ModeToggle />
                 </header>
-                <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
+                <main className="flex min-h-screen flex-col items-center justify-center">
                   <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
                     {children}
                   </div>
