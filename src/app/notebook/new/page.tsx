@@ -1,7 +1,5 @@
-import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
-import Link from "next/link";
-import { NewNotebookForm } from "~/app/notebook/new/_components/form";
 
+import { NewNotebookForm } from "~/app/notebook/new/_components/form";
 import { TextFadeInUpGrab } from "~/components/animations/text";
 
 // import { api } from "~/trpc/server";

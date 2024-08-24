@@ -4,7 +4,7 @@
 import { sql } from "drizzle-orm";
 import {
   index,
-  pgTableCreator,
+  pgSchema,
   serial,
   timestamp,
   varchar,
@@ -16,21 +16,23 @@ import {
  *
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
-export const createTable = pgTableCreator((name) => `notes.timmo.dev_${name}`);
+export const mySchema = pgSchema("notes");
 
-export const posts = createTable(
-  "post",
+export const notebooks = mySchema.table(
+  "notebook",
   {
     id: serial("id").primaryKey(),
-    name: varchar("name", { length: 256 }),
+    title: varchar("title", { length: 256 }),
+    description: varchar("description", {}),
+    userId: varchar("user_id", { length: 36 }),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
-      () => new Date()
+      () => new Date(),
     ),
   },
-  (example) => ({
-    nameIndex: index("name_idx").on(example.name),
-  })
+  ({ title }) => ({
+    titleIndex: index("title_idx").on(title),
+  }),
 );

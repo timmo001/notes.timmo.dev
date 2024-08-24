@@ -1,9 +1,11 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
+import { type z } from "zod";
+import { useAuth } from "@clerk/nextjs";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
+import { api } from "~/trpc/react";
 import { Button } from "~/components/ui/button";
 import {
   Form,
@@ -15,27 +17,38 @@ import {
   FormMessage,
 } from "~/components/ui/form";
 import { Input } from "~/components/ui/input";
-
-const FormSchema = z.object({
-  title: z.string().min(1, {
-    message: "Title must be at least 1 character.",
-  }),
-  description: z.string().optional(),
-});
+import { CreateNotebookSchema } from "~/server/api/routers/notebook";
 
 export function NewNotebookForm() {
-  const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
+  const auth = useAuth();
+  const createNotebook = api.notebook.createNotebook.useMutation({
+    onSuccess: async () => {
+      await utils.notebook.invalidate();
+      router.replace("/");
+    },
+  });
+  const utils = api.useUtils();
+
+  const form = useForm<z.infer<typeof CreateNotebookSchema>>({
+    resolver: zodResolver(CreateNotebookSchema),
     defaultValues: {
       title: "",
       description: "",
     },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
+  function onSubmit(data: z.infer<typeof CreateNotebookSchema>) {
     console.log("New notebook:", data);
+    if (!auth.userId) {
+      console.error("User is not authenticated");
+      return;
+    }
 
-    // TODO: Add mutation here
+    createNotebook.mutate({
+      title: data.title,
+      description: data.description,
+      userId: auth.userId,
+    });
   }
 
   return (
