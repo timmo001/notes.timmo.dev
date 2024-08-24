@@ -10,6 +10,8 @@ export default function Header() {
 
   const title = useMemo<string>(() => {
     switch (pathname) {
+      case "/":
+        return "";
       case "/settings":
         return "Settings";
       default:
@@ -18,14 +20,14 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className="flex w-full items-center justify-between gap-2 p-4">
+    <header className="flex w-full items-center justify-between gap-2 px-4 py-3">
       <h1 className="flex-1 text-2xl font-bold">{title}</h1>
       <ModeToggle />
       <SignedIn>
         <UserButton />
       </SignedIn>
       <SignedOut>
-        <div className="transform rounded-md bg-violet-800 bg-opacity-80 px-4 py-2 text-white shadow-lg drop-shadow-2xl transition duration-300 hover:scale-105 hover:bg-violet-800">
+        <div className="transform rounded-md bg-violet-800/80 px-4 py-2 text-white shadow-lg drop-shadow-2xl transition duration-300 hover:scale-105 hover:bg-violet-800">
           <SignInButton mode="modal" />
         </div>
       </SignedOut>
