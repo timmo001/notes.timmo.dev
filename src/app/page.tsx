@@ -35,11 +35,20 @@ export default async function Home() {
             {notebooks.map((notebook) => (
               <Link
                 key={notebook.id}
-                className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
+                className="flex max-w-xs flex-col items-start justify-between gap-2 rounded-xl bg-white/10 p-4 hover:bg-white/20"
                 href={`/notebook/${notebook.id}`}
               >
-                <h3 className="text-2xl font-bold">{notebook.title}</h3>
-                <div className="text-lg">{notebook.description ?? ""}</div>
+                <div>
+                  <h3 className="text-2xl font-semibold">{notebook.title}</h3>
+                  <div className="mt-1 text-lg font-light">
+                    {notebook.description ?? ""}
+                  </div>
+                </div>
+                <div className="text-sm text-gray-400">
+                  {new Date(
+                    notebook.updatedAt ?? notebook.createdAt,
+                  ).toUTCString()}
+                </div>
               </Link>
             ))}
             <Link
@@ -61,7 +70,7 @@ export default async function Home() {
                 />
               </svg>
 
-              <div className="text-lg">Create a new notebook</div>
+              <div className="text-lg font-normal">Create a new notebook</div>
             </Link>
           </div>
         </SignedIn>
