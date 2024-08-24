@@ -22,13 +22,18 @@ export default async function Notebook({ params }: { params: { id: string } }) {
   if (!notebook) notFound();
 
   return (
-    <>
-      <section className="flex flex-col items-center justify-center gap-8">
+    <div
+      className="min-w-screen container fixed top-16 flex w-screen flex-col items-center justify-around gap-4 px-4 py-4"
+      style={{
+        maxHeight: "calc(100vh - 4rem)",
+      }}
+    >
+      <section className="flex flex-col items-center justify-center">
         <TextFadeInUpGrab>
-          <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
+          <h1 className="text-7xl font-extrabold tracking-tight">
             {notebook.title}
           </h1>
-          <h2 className="mt-4 text-wrap text-center text-xl font-light">
+          <h2 className="mt-3 text-wrap text-center text-xl font-light">
             {notebook.description ?? ""}
           </h2>
         </TextFadeInUpGrab>
@@ -39,6 +44,6 @@ export default async function Notebook({ params }: { params: { id: string } }) {
           <textarea className="h-full w-full rounded-e-xl bg-gray-950" />
         </div>
       </section>
-    </>
+    </div>
   );
 }

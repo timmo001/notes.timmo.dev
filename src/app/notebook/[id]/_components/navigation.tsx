@@ -11,21 +11,19 @@ import {
 
 export function Navigation() {
   return (
-    <div className="flex min-h-full flex-col border-e md:w-[240px]">
-      <Command className="min-h-full w-full rounded-xl">
-        <CommandInput placeholder="Search" />
-        <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Pages">
-            {[...Array(20)].map((_, i) => (
-              <CommandItem key={i}>
-                <Calculator className="mr-2 h-4 w-4" />
-                <span>Page {(i + 1).toString().padStart(2, "0")}</span>
-              </CommandItem>
-            ))}
-          </CommandGroup>
-        </CommandList>
-      </Command>
-    </div>
+    <Command className="flex max-h-[72vh] flex-col rounded-s-xl border-e md:w-[248px]">
+      <CommandInput placeholder="Search" />
+      <CommandList>
+        <CommandEmpty>No results found.</CommandEmpty>
+        <CommandGroup heading="Pages">
+          {[...Array(20)].map((_, i) => (
+            <CommandItem key={i}>
+              <Calculator className="mr-2 h-4 w-4" />
+              <span>Page {(i + 1).toString().padStart(2, "0")}</span>
+            </CommandItem>
+          ))}
+        </CommandGroup>
+      </CommandList>
+    </Command>
   );
 }
