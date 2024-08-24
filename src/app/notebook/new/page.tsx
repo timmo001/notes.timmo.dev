@@ -1,14 +1,8 @@
-
+"use client";
 import { NewNotebookForm } from "~/app/notebook/new/_components/form";
 import { TextFadeInUpGrab } from "~/components/animations/text";
 
-// import { api } from "~/trpc/server";
-
-export default async function Home() {
-  // const hello = await api.post.hello({ text: "from tRPC" });
-
-  // void api.post.getLatest.prefetch();
-
+export default function NewNotebook() {
   return (
     <>
       <TextFadeInUpGrab>
