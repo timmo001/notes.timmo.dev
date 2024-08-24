@@ -47,14 +47,12 @@ export default function RootLayout({
               <HydrateClient>
                 <Header />
                 <main
-                  className="flex min-h-screen flex-col items-center justify-center"
+                  className="container flex min-h-screen flex-col items-center justify-around gap-12 px-4 py-4"
                   style={{
                     minHeight: "calc(100vh - 64px)",
                   }}
                 >
-                  <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-                    {children}
-                  </div>
+                  {children}
                 </main>
               </HydrateClient>
             </TRPCReactProvider>

@@ -1,8 +1,8 @@
 "use client";
+import { useMemo } from "react";
+import { usePathname } from "next/navigation";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useMemo } from "react";
 
 import { ModeToggle } from "~/components/theme-toggle";
 
@@ -21,7 +21,7 @@ export default function Header() {
       case "/notebook/new":
         return [{ name: "Notes", href: "/" }, { name: "New Notebook" }];
       default:
-        return [{ name: "Notes" }];
+        return [{ name: "Notes", href: "/" }];
     }
   }, [pathname]);
 

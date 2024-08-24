@@ -1,10 +1,11 @@
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
+import { notFound } from "next/navigation";
+import { currentUser } from "@clerk/nextjs/server";
+import { Plus } from "lucide-react";
 import Link from "next/link";
 
 import { api } from "~/trpc/server";
 import { TextFadeInUpGrab } from "~/components/animations/text";
-import { currentUser } from "@clerk/nextjs/server";
-import { notFound } from "next/navigation";
 
 export default async function Home() {
   const user = await currentUser();
@@ -22,6 +23,8 @@ export default async function Home() {
             Notes
           </h1>
         </TextFadeInUpGrab>
+      </section>
+      <section className="flex flex-col items-center justify-center gap-8">
         <SignedOut>
           <div className="transform rounded-md bg-violet-800/80 px-4 py-2 text-white shadow-lg drop-shadow-2xl transition duration-300 hover:scale-105 hover:bg-violet-800">
             <SignInButton mode="modal">Please Sign In</SignInButton>
@@ -35,7 +38,7 @@ export default async function Home() {
             {notebooks.map((notebook) => (
               <Link
                 key={notebook.id}
-                className="flex max-w-xs flex-col items-start justify-between gap-2 rounded-xl bg-white/10 p-4 hover:bg-white/20"
+                className="flex max-w-xs flex-col items-start justify-between gap-2 rounded-xl bg-white/10 p-4 transition-all delay-200 hover:bg-white/20"
                 href={`/notebook/${notebook.id}`}
               >
                 <div>
@@ -52,24 +55,10 @@ export default async function Home() {
               </Link>
             ))}
             <Link
-              className="flex max-w-xs flex-col items-center justify-center rounded-xl bg-white/10 p-4 py-8 hover:bg-white/20"
+              className="flex max-w-xs flex-col items-center justify-center rounded-xl bg-white/10 p-4 py-8 opacity-60 transition-all delay-200 hover:bg-white/20 hover:opacity-100"
               href="/notebook/new"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="size-32"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 4.5v15m7.5-7.5h-15"
-                />
-              </svg>
-
+              <Plus size={128} />
               <div className="text-lg font-normal">Create a new notebook</div>
             </Link>
           </div>

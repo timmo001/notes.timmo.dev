@@ -31,4 +31,20 @@ export const notebookRouter = createTRPCRouter({
       });
       return post ?? null;
     }),
+
+  getOne: publicProcedure
+    .input(
+      z.object({
+        id: z.number().min(1),
+        userId: z.string().min(1),
+      }),
+    )
+    .query(async ({ ctx, input }) => {
+      const post = await ctx.db.query.notebooks.findFirst({
+        // Adding userId to the where clause to ensure that the user is the owner of the notebook
+        where: (notebooks, { eq }) =>
+          eq(notebooks.id, input.id) && eq(notebooks.userId, input.userId),
+      });
+      return post ?? null;
+    }),
 });
