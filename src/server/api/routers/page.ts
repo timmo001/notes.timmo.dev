@@ -26,7 +26,7 @@ export const pageRouter = createTRPCRouter({
     .query(async ({ ctx, input }) => {
       const post = await ctx.db.query.pages.findMany({
         where: (pages, { eq }) => eq(pages.notebookId, input.notebookId),
-        orderBy: (pages, { desc }) => [desc(pages.updatedAt)],
+        orderBy: (pages, { desc }) => [desc(pages.title)],
       });
       return post ?? null;
     }),
