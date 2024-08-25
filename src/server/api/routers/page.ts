@@ -14,6 +14,7 @@ export const pageRouter = createTRPCRouter({
   create: publicProcedure
     .input(CreatePageSchema)
     .mutation(async ({ ctx, input }) => {
+      console.log("Create page:", input);
       await ctx.db.insert(pages).values({
         title: input.title,
         content: input.content,
@@ -24,6 +25,7 @@ export const pageRouter = createTRPCRouter({
   getAll: publicProcedure
     .input(z.object({ notebookId: z.number().min(1) }))
     .query(async ({ ctx, input }) => {
+      console.log("Get all pages:", input);
       const post = await ctx.db.query.pages.findMany({
         where: (pages, { eq }) => eq(pages.notebookId, input.notebookId),
         orderBy: (pages, { asc }) => [asc(pages.title)],
@@ -39,6 +41,7 @@ export const pageRouter = createTRPCRouter({
       }),
     )
     .query(async ({ ctx, input }) => {
+      console.log("Get one page:", input);
       const post = await ctx.db.query.pages.findFirst({
         // Adding notebookId to the where clause to ensure that the notebook is the owner of the page
         where: (pages, { eq }) =>

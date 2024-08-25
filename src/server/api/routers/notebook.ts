@@ -15,6 +15,7 @@ export const notebookRouter = createTRPCRouter({
   create: publicProcedure
     .input(CreateNotebookSchema)
     .mutation(async ({ ctx, input }) => {
+      console.log("Create notebook:", input);
       await ctx.db.insert(notebooks).values({
         title: input.title,
         description: input.description,
@@ -25,6 +26,7 @@ export const notebookRouter = createTRPCRouter({
   getAll: publicProcedure
     .input(z.object({ userId: z.string().min(1) }))
     .query(async ({ ctx, input }) => {
+      console.log("Get all notebooks:", input);
       const post = await ctx.db.query.notebooks.findMany({
         where: (notebooks, { eq }) => eq(notebooks.userId, input.userId),
         orderBy: (notebooks, { desc }) => [desc(notebooks.updatedAt)],
@@ -40,6 +42,7 @@ export const notebookRouter = createTRPCRouter({
       }),
     )
     .query(async ({ ctx, input }) => {
+      console.log("Get one notebook:", input);
       const post = await ctx.db.query.notebooks.findFirst({
         // Adding userId to the where clause to ensure that the user is the owner of the notebook
         where: (notebooks, { eq }) =>
