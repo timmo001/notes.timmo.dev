@@ -40,7 +40,7 @@ export function Editor({ initialValue, onChange }: EditorProp) {
   return (
     <EditorRoot>
       <EditorContent
-        className="rounded-xl border p-4"
+        className="rounded-e-xl rounded-es-xl border p-4"
         {...(initialValue && { initialContent: initialValue })}
         extensions={extensions}
         editorProps={{

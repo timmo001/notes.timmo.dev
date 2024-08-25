@@ -96,7 +96,7 @@ export function EditorUI({
         selectedPage={selectedPage}
         onNewPage={handleNewPage}
       />
-      <div className="flex h-full flex-1 flex-col rounded-e-xl border-s">
+      <div className="flex h-full flex-1 flex-col">
         {selectedPage !== null && (
           <Editor
             initialValue={initialContent}

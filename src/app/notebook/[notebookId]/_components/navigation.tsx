@@ -32,7 +32,7 @@ export function Navigation({
   const router = useRouter();
 
   return (
-    <Command className="flex max-h-[72vh] w-[248px] flex-col rounded-s-xl">
+    <Command className="flex max-h-[72vh] w-[248px] flex-col rounded-es-lg rounded-ss-xl border-b border-s border-t">
       <CommandInput placeholder="Search" />
       <CommandList>
         <CommandGroup heading="Pages">
