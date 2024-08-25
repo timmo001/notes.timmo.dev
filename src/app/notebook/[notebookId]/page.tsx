@@ -3,7 +3,7 @@ import { currentUser } from "@clerk/nextjs/server";
 
 import { api } from "~/trpc/server";
 import { TextFadeInUpGrab } from "~/components/animations/text";
-import { EditorUI } from "~/components/editorUI";
+import { EditorUI } from "~/app/notebook/[notebookId]/_components/editorUI";
 
 export default async function Notebook({
   params,

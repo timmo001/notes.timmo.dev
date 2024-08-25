@@ -2,7 +2,7 @@ import { notFound, redirect } from "next/navigation";
 import { currentUser } from "@clerk/nextjs/server";
 
 import { api } from "~/trpc/server";
-import { EditorUI } from "~/components/editorUI";
+import { EditorUI } from "~/app/notebook/[notebookId]/_components/editorUI";
 import { TextFadeInUpGrab } from "~/components/animations/text";
 
 export default async function Notebook({
