@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import { ModeToggle } from "~/components/theme-toggle";
 
-export default function Header() {
+export function Header() {
   const pathname = usePathname();
 
   const title = useMemo<

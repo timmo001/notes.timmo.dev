@@ -27,7 +27,7 @@ export const notebookRouter = createTRPCRouter({
     .query(async ({ ctx, input }) => {
       const post = await ctx.db.query.notebooks.findMany({
         where: (notebooks, { eq }) => eq(notebooks.userId, input.userId),
-        orderBy: (notebooks, { desc }) => [desc(notebooks.createdAt)],
+        orderBy: (notebooks, { desc }) => [desc(notebooks.updatedAt)],
       });
       return post ?? null;
     }),

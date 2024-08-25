@@ -1,9 +1,10 @@
 // Example model schema from the Drizzle docs
 // https://orm.drizzle.team/docs/sql-schema-declaration
 
-import { sql } from "drizzle-orm";
+import { relations, sql } from "drizzle-orm";
 import {
   index,
+  integer,
   pgSchema,
   serial,
   timestamp,
@@ -33,6 +34,36 @@ export const notebooks = mySchema.table(
     ),
   },
   ({ title }) => ({
-    titleIndex: index("title_idx").on(title),
+    titleIndex: index("notebook_title_idx").on(title),
   }),
 );
+
+export const notebooksRelations = relations(notebooks, ({ many }) => ({
+  notebookPages: many(pages),
+}));
+
+export const pages = mySchema.table(
+  "page",
+  {
+    id: serial("id").primaryKey(),
+    title: varchar("title", { length: 256 }),
+    content: varchar("content", {}),
+    notebookId: integer("dashboard_id").notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
+      () => new Date(),
+    ),
+  },
+  ({ title }) => ({
+    titleIndex: index("page_title_idx").on(title),
+  }),
+);
+
+export const pagesRelations = relations(pages, ({ one }) => ({
+  notebook: one(notebooks, {
+    fields: [pages.notebookId],
+    references: [notebooks.id],
+  }),
+}));
