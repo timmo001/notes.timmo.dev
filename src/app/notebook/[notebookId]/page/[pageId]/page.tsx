@@ -29,13 +29,17 @@ export default async function Notebook({
 
   void api.page.getAll.prefetch({ notebookId: notebook.id });
 
+  const pageId = params.pageId ? (parseInt(params.pageId) ?? -1) : -1;
+
   // Redirect to the last page if the pageId is invalid or out of bounds
-  if (
-    !params.pageId ||
-    parseInt(params.pageId) < 0 ||
-    parseInt(params.pageId) > pages.length
-  )
-    redirect(`/notebook/${params.notebookId}/page/${pages.length}`);
+  if (pageId < 0 || pages.findIndex((page) => page.id === pageId) < 0) {
+    const lastPage = pages[pages.length - 1];
+    if (!lastPage || !pages || pages.length < 1) {
+      redirect(`/notebook/${params.notebookId}`);
+    } else {
+      redirect(`/notebook/${params.notebookId}/page/${lastPage.id}`);
+    }
+  }
 
   return (
     <div
