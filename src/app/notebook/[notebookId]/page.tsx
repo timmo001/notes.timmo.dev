@@ -3,6 +3,7 @@ import { currentUser } from "@clerk/nextjs/server";
 
 import { api } from "~/trpc/server";
 import { TextFadeInUpGrab } from "~/components/animations/text";
+import { EditorUI } from "~/app/notebook/[notebookId]/_components/editorUI";
 
 export default async function Notebook({
   params,
@@ -24,8 +25,11 @@ export default async function Notebook({
 
   if (!notebook) notFound();
 
+  const pages = (await api.page.getAll({ notebookId: notebook.id })) || [];
+
+  void api.page.getAll.prefetch({ notebookId: notebook.id });
+
   return (
-    // <div className="container flex w-full flex-col flex-wrap items-center justify-around gap-4 px-4 py-4">
     <>
       <section className="flex flex-col items-center justify-center">
         <TextFadeInUpGrab>
@@ -37,8 +41,9 @@ export default async function Notebook({
           </h2>
         </TextFadeInUpGrab>
       </section>
-      <section className="items-between flex w-full flex-1 flex-row justify-between rounded-xl border shadow-md" />
+      <section className="items-between flex w-full flex-1 flex-row justify-between rounded-xl border shadow-md">
+        <EditorUI notebook={notebook} pages={pages} selectedPage={null} />
+      </section>
     </>
-    // </div>
   );
 }

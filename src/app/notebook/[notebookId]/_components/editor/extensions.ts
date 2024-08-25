@@ -1,18 +1,19 @@
-"use client";
 import {
-  HorizontalRule,
-  Placeholder,
-  StarterKit,
-  TaskItem,
-  TaskList,
   TiptapImage,
   TiptapLink,
-  // UpdatedImage,
+  UpdatedImage,
+  TaskList,
+  TaskItem,
+  HorizontalRule,
+  StarterKit,
+  Placeholder,
+  AIHighlight,
 } from "novel/extensions";
+import { UploadImagesPlugin } from "novel/plugins";
 
 import { cx } from "class-variance-authority";
 
-// You can overwrite the placeholder with your own configuration
+const aiHighlight = AIHighlight;
 const placeholder = Placeholder;
 const tiptapLink = TiptapLink.configure({
   HTMLAttributes: {
@@ -22,14 +23,35 @@ const tiptapLink = TiptapLink.configure({
   },
 });
 
+const tiptapImage = TiptapImage.extend({
+  addProseMirrorPlugins() {
+    return [
+      UploadImagesPlugin({
+        imageClass: cx("opacity-40 rounded-lg border border-stone-200"),
+      }),
+    ];
+  },
+}).configure({
+  allowBase64: true,
+  HTMLAttributes: {
+    class: cx("rounded-lg border border-muted"),
+  },
+});
+
+const updatedImage = UpdatedImage.configure({
+  HTMLAttributes: {
+    class: cx("rounded-lg border border-muted"),
+  },
+});
+
 const taskList = TaskList.configure({
   HTMLAttributes: {
-    class: cx("not-prose pl-2"),
+    class: cx("not-prose pl-2 "),
   },
 });
 const taskItem = TaskItem.configure({
   HTMLAttributes: {
-    class: cx("flex items-start my-4"),
+    class: cx("flex gap-2 items-start my-4"),
   },
   nested: true,
 });
@@ -63,7 +85,9 @@ const starterKit = StarterKit.configure({
   },
   codeBlock: {
     HTMLAttributes: {
-      class: cx("rounded-sm bg-muted border p-5 font-mono font-medium"),
+      class: cx(
+        "rounded-md bg-muted text-muted-foreground border p-5 font-mono font-medium",
+      ),
     },
   },
   code: {
@@ -84,9 +108,10 @@ export const defaultExtensions = [
   starterKit,
   placeholder,
   tiptapLink,
-  TiptapImage,
-  // UpdatedImage,
+  tiptapImage,
+  updatedImage,
   taskList,
   taskItem,
   horizontalRule,
+  aiHighlight,
 ];

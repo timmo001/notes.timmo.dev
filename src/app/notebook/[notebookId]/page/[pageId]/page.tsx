@@ -2,7 +2,7 @@ import { notFound, redirect } from "next/navigation";
 import { currentUser } from "@clerk/nextjs/server";
 
 import { api } from "~/trpc/server";
-import { Editor } from "~/app/notebook/[notebookId]/_components/editor";
+import { EditorUI } from "~/app/notebook/[notebookId]/_components/editorUI";
 import { TextFadeInUpGrab } from "~/components/animations/text";
 
 export default async function Notebook({
@@ -54,7 +54,7 @@ export default async function Notebook({
         </TextFadeInUpGrab>
       </section>
       <section className="items-between flex w-full flex-1 flex-row justify-between rounded-xl border shadow-md">
-        <Editor
+        <EditorUI
           notebook={notebook}
           pages={pages}
           selectedPage={parseInt(params.pageId)}

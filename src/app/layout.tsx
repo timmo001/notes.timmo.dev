@@ -1,14 +1,22 @@
+import "~/styles/prosemirror.css";
 import "~/styles/globals.css";
 
 import { type Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
+import { Inter as FontSans } from "next/font/google";
 
-import { TRPCReactProvider } from "~/trpc/react";
-import { ThemeProvider } from "~/components/theme-provider";
+import { cn } from "~/lib/utils";
+import { Header } from "~/components/header";
 import { HydrateClient } from "~/trpc/server";
-import Header from "~/components/header";
+import { ThemeProvider } from "~/components/theme-provider";
+import { Toaster } from "~/components/ui/toaster";
+import { TRPCReactProvider } from "~/trpc/react";
+
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Notes",
@@ -35,8 +43,13 @@ export default function RootLayout({
         baseTheme: dark,
       }}
     >
-      <html lang="en" className={`${GeistSans.variable}`}>
-        <body>
+      <html lang="en">
+        <body
+          className={cn(
+            "min-h-screen bg-background font-sans antialiased",
+            fontSans.variable,
+          )}
+        >
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -54,6 +67,7 @@ export default function RootLayout({
                 >
                   {children}
                 </main>
+                <Toaster />
               </HydrateClient>
             </TRPCReactProvider>
           </ThemeProvider>
