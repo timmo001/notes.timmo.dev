@@ -1,5 +1,5 @@
 "use client";
-import { NewNotebookForm } from "~/app/notebook/new/_components/form";
+import { NewNotebookForm } from "~/app/notebook/new/_components/newNotebookForm";
 import { TextFadeInUpGrab } from "~/components/animations/text";
 
 export default function NewNotebook() {

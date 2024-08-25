@@ -1,25 +1,33 @@
-import { api } from "~/trpc/server";
 import { notFound } from "next/navigation";
 import { currentUser } from "@clerk/nextjs/server";
 
-import { Navigation } from "~/app/notebook/[id]/_components/navigation";
+import { api } from "~/trpc/server";
+import { Editor } from "~/app/notebook/[notebookId]/_components/editor";
 import { TextFadeInUpGrab } from "~/components/animations/text";
 
-export default async function Notebook({ params }: { params: { id: string } }) {
+export default async function Notebook({
+  params,
+}: {
+  params: { notebookId: string };
+}) {
   const user = await currentUser();
   if (!user) notFound();
 
   const notebook = await api.notebook.getOne({
-    id: parseInt(params.id),
+    id: parseInt(params.notebookId),
     userId: user.id,
   });
 
   void api.notebook.getOne.prefetch({
-    id: parseInt(params.id),
+    id: parseInt(params.notebookId),
     userId: user.id,
   });
 
   if (!notebook) notFound();
+
+  const pages = (await api.page.getAll({ notebookId: notebook.id })) || [];
+
+  void api.page.getAll.prefetch({ notebookId: notebook.id });
 
   return (
     <div
@@ -39,10 +47,7 @@ export default async function Notebook({ params }: { params: { id: string } }) {
         </TextFadeInUpGrab>
       </section>
       <section className="items-between flex w-full flex-1 flex-row justify-between rounded-xl border shadow-md">
-        <Navigation />
-        <div className="flex flex-1 flex-col rounded-xl">
-          <textarea className="h-full w-full rounded-e-xl bg-gray-950" />
-        </div>
+        <Editor notebook={notebook} pages={pages} selectedPage={null} />
       </section>
     </div>
   );
