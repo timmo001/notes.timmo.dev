@@ -13,21 +13,23 @@ export default async function Notebook({
   const user = await currentUser();
   if (!user) notFound();
 
+  const notebookId = parseInt(params.notebookId);
+
   const notebook = await api.notebook.getOne({
-    id: parseInt(params.notebookId),
+    id: notebookId,
     userId: user.id,
   });
 
   void api.notebook.getOne.prefetch({
-    id: parseInt(params.notebookId),
+    id: notebookId,
     userId: user.id,
   });
 
   if (!notebook) notFound();
 
-  const pages = (await api.page.getAll({ notebookId: notebook.id })) || [];
+  const pages = (await api.page.getAll({ notebookId: notebookId })) || [];
 
-  void api.page.getAll.prefetch({ notebookId: notebook.id });
+  void api.page.getAll.prefetch({ notebookId: notebookId });
 
   const pageId = params.pageId ? (parseInt(params.pageId) ?? -1) : -1;
 
