@@ -44,10 +44,12 @@ export const notebookRouter = createTRPCRouter({
     .query(async ({ ctx, input }) => {
       console.log("Get one notebook:", input);
       const post = await ctx.db.query.notebooks.findFirst({
-        // Adding userId to the where clause to ensure that the user is the owner of the notebook
-        where: (notebooks, { eq }) =>
-          eq(notebooks.id, input.id) && eq(notebooks.userId, input.userId),
+        where: (notebooks, { eq }) => eq(notebooks.id, input.id),
       });
+
+      // Ensure that the user is the owner of the notebook
+      if (post?.userId !== input.userId) return null;
+
       return post ?? null;
     }),
 });

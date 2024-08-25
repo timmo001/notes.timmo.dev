@@ -27,9 +27,9 @@ export default async function Notebook({
 
   if (!notebook) notFound();
 
-  const pages = (await api.page.getAll({ notebookId: notebookId })) || [];
+  const pages = (await api.page.getAll({ notebookId: notebook.id })) || [];
 
-  void api.page.getAll.prefetch({ notebookId: notebookId });
+  void api.page.getAll.prefetch({ notebookId: notebook.id });
 
   return (
     <>

@@ -43,10 +43,12 @@ export const pageRouter = createTRPCRouter({
     .query(async ({ ctx, input }) => {
       console.log("Get one page:", input);
       const post = await ctx.db.query.pages.findFirst({
-        // Adding notebookId to the where clause to ensure that the notebook is the owner of the page
-        where: (pages, { eq }) =>
-          eq(pages.id, input.id) && eq(pages.notebookId, input.notebookId),
+        where: (pages, { eq }) => eq(pages.id, input.id),
       });
+
+      // Ensure that the page belongs to the notebook
+      if (post?.notebookId !== input.notebookId) return null;
+
       return post ?? null;
     }),
 
