@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "~/components/ui/button";
-import { SelectorItem } from "~/app/notebook/[notebookId]/_components/editor/selectors/node-selector";
+import { SelectorItem } from "~/components/editor/selectors/node-selector";
 import { cn } from "~/lib/utils";
 
 export const TextButtons = () => {

@@ -12,7 +12,7 @@ import {
 } from "~/components/ui/dialog";
 import { Navigation } from "~/app/notebook/[notebookId]/_components/navigation";
 import { NewPageForm } from "~/app/notebook/[notebookId]/_components/newPageForm";
-import { Editor } from "~/app/notebook/[notebookId]/_components/editor";
+import { Editor } from "~/components/editor";
 
 type Page = {
   id: number;

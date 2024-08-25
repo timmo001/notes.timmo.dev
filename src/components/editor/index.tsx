@@ -13,17 +13,17 @@ import {
 import { handleImageDrop, handleImagePaste } from "novel/plugins";
 import { ImageResizer, handleCommandNavigation } from "novel/extensions";
 
-import { ColorSelector } from "~/app/notebook/[notebookId]/_components/editor/selectors/color-selector";
-import { defaultExtensions } from "~/app/notebook/[notebookId]/_components/editor/extensions";
-import { LinkSelector } from "~/app/notebook/[notebookId]/_components/editor/selectors/link-selector";
-import { NodeSelector } from "~/app/notebook/[notebookId]/_components/editor/selectors/node-selector";
+import { ColorSelector } from "~/components/editor/selectors/color-selector";
+import { defaultExtensions } from "~/components/editor/extensions";
+import { LinkSelector } from "~/components/editor/selectors/link-selector";
+import { NodeSelector } from "~/components/editor/selectors/node-selector";
 import { Separator } from "~/components/ui/separator";
 import {
   slashCommand,
   suggestionItems,
-} from "~/app/notebook/[notebookId]/_components/editor/slash-command";
-import { TextButtons } from "~/app/notebook/[notebookId]/_components/editor/selectors/text-buttons";
-import { uploadFn } from "~/app/notebook/[notebookId]/_components/editor/image-upload";
+} from "~/components/editor/slash-command";
+import { TextButtons } from "~/components/editor/selectors/text-buttons";
+import { uploadFn } from "~/components/editor/image-upload";
 
 const extensions = [...defaultExtensions, slashCommand];
 
