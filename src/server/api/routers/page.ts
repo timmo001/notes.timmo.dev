@@ -1,3 +1,4 @@
+import { eq } from "drizzle-orm";
 import { z } from "zod";
 
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
@@ -44,5 +45,21 @@ export const pageRouter = createTRPCRouter({
           eq(pages.id, input.id) && eq(pages.notebookId, input.notebookId),
       });
       return post ?? null;
+    }),
+
+  updateContent: publicProcedure
+    .input(
+      z.object({
+        id: z.number().min(1),
+        content: z.string().optional(),
+      }),
+    )
+    .mutation(async ({ ctx, input }) => {
+      await ctx.db
+        .update(pages)
+        .set({
+          content: input.content,
+        })
+        .where(eq(pages.id, input.id));
     }),
 });

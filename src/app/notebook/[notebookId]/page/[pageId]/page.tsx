@@ -42,12 +42,7 @@ export default async function Notebook({
   }
 
   return (
-    <div
-      className="min-w-screen container fixed top-16 flex w-screen flex-col items-center justify-around gap-4 px-4 py-4"
-      style={{
-        maxHeight: "calc(100vh - 4rem)",
-      }}
-    >
+    <>
       <section className="flex flex-col items-center justify-center">
         <TextFadeInUpGrab>
           <h1 className="text-7xl font-extrabold tracking-tight">
@@ -65,6 +60,6 @@ export default async function Notebook({
           selectedPage={parseInt(params.pageId)}
         />
       </section>
-    </div>
+    </>
   );
 }
