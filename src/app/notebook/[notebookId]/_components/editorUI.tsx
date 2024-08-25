@@ -12,7 +12,6 @@ import {
 } from "~/components/ui/dialog";
 import { Navigation } from "~/app/notebook/[notebookId]/_components/navigation";
 import { NewPageForm } from "~/app/notebook/[notebookId]/_components/newPageForm";
-import { defaultContent } from "~/app/notebook/[notebookId]/_components/editor/default-value";
 import { Editor } from "~/app/notebook/[notebookId]/_components/editor";
 
 type Page = {
@@ -76,7 +75,7 @@ export function EditorUI({
     () =>
       page?.content && page.content.startsWith("{")
         ? JSON.parse(page.content)
-        : defaultContent,
+        : null,
     [page?.content],
   );
 
