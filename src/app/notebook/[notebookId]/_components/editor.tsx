@@ -61,7 +61,7 @@ export function Editor({
           <textarea className="h-full w-full rounded-e-xl bg-gray-950" />
         )}
       </div>
-      <Dialog open={dialogOpen}>
+      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
             <DialogTitle>New Page</DialogTitle>

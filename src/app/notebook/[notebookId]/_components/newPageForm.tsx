@@ -73,7 +73,7 @@ export function NewPageForm({
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
         <FormField
           control={form.control}
           name="title"
@@ -81,7 +81,7 @@ export function NewPageForm({
             <FormItem>
               <FormLabel>Title</FormLabel>
               <FormControl>
-                <Input placeholder="Page" {...field} />
+                <Input placeholder="Page 01" {...field} />
               </FormControl>
               <FormDescription>The name of your page.</FormDescription>
               <FormMessage />
