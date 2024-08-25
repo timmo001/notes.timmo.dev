@@ -41,7 +41,7 @@ export default async function Notebook({
           </h2>
         </TextFadeInUpGrab>
       </section>
-      <section className="items-between flex w-full flex-1 flex-row justify-between">
+      <section className="items-between flex w-full flex-1 flex-row justify-between gap-2">
         <EditorUI notebook={notebook} pages={pages} selectedPage={null} />
       </section>
     </>
