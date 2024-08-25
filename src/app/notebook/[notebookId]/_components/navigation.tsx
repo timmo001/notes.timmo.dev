@@ -44,6 +44,9 @@ export function Navigation({
           {pages.map((page) => (
             <CommandItem
               key={page.id}
+              className={`${
+                selectedPage === page.id ? "bg-accent/50" : ""
+              } hover:bg-accent-hover`}
               onSelect={() => {
                 router.push(`/notebook/${notebookId}/page/${page.id}`);
               }}
