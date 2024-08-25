@@ -1,5 +1,6 @@
-import { notebookRouter } from "~/server/api/routers/notebook";
 import { createCallerFactory, createTRPCRouter } from "~/server/api/trpc";
+import { notebookRouter } from "~/server/api/routers/notebook";
+import { pageRouter } from "~/server/api/routers/page";
 
 /**
  * This is the primary router for your server.
@@ -8,6 +9,7 @@ import { createCallerFactory, createTRPCRouter } from "~/server/api/trpc";
  */
 export const appRouter = createTRPCRouter({
   notebook: notebookRouter,
+  page: pageRouter,
 });
 
 // export type definition of API
