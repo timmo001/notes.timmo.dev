@@ -66,20 +66,13 @@
     std-env "^3.7.0"
     swr "^2.2.0"
 
-"@clerk/themes@2.1.21":
-  version "2.1.21"
-  resolved "https://registry.npmjs.org/@clerk/themes/-/themes-2.1.21.tgz"
-  integrity sha512-eJTji2x6XMt6FOD5deNjTe86foHIUEBNuaCWVywjVnLbqHX5/uYsJkiexpUrKGGfyEjTr7z5j7V7jZNLsYRSRw==
+"@clerk/themes@2.1.23":
+  version "2.1.23"
+  resolved "https://registry.yarnpkg.com/@clerk/themes/-/themes-2.1.23.tgz#458ade9f2315e3c96622619f199239eaefa178ab"
+  integrity sha512-JDBM7z2pY/YHpDqR/P3ALtS7T8m/qK7X7fkldyn1nzZ6wzpzIG4WOoNFv42Pm3YW52Co+eXsOHOL86qdt91NvA==
   dependencies:
-    "@clerk/types" "4.14.0"
+    "@clerk/types" "4.15.1"
     tslib "2.4.1"
-
-"@clerk/types@4.14.0":
-  version "4.14.0"
-  resolved "https://registry.npmjs.org/@clerk/types/-/types-4.14.0.tgz"
-  integrity sha512-d3MUcWtXGTOS7QYCRVrOra7NYAGRiNWlb+Ke2KMSb+Z3lea6WlKeHa18uVnAkIVxBXtHlzdU2kwW0PrHkx8j9Q==
-  dependencies:
-    csstype "3.1.1"
 
 "@clerk/types@4.15.1":
   version "4.15.1"
