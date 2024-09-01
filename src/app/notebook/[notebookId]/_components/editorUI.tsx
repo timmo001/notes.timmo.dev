@@ -13,15 +13,8 @@ import {
 import { Navigation } from "~/app/notebook/[notebookId]/_components/navigation";
 import { NewPageForm } from "~/app/notebook/[notebookId]/_components/newPageForm";
 import { Editor } from "~/components/editor";
-
-type Page = {
-  id: number;
-  title: string | null;
-  createdAt: Date;
-  updatedAt: Date | null;
-  content: string | null;
-  notebookId: number;
-};
+import { Notebook, Page } from "~/lib/types";
+import { EditorHeader } from "~/components/editor/header";
 
 let updateTimeout: NodeJS.Timeout | null = null;
 export function EditorUI({
@@ -29,14 +22,7 @@ export function EditorUI({
   pages,
   selectedPage,
 }: {
-  notebook: {
-    id: number;
-    title: string | null;
-    description: string | null;
-    userId: string | null;
-    createdAt: Date;
-    updatedAt: Date | null;
-  };
+  notebook: Notebook;
   pages: Array<Page>;
   selectedPage: number | null;
 }) {

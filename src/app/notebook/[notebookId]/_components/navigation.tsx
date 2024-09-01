@@ -1,8 +1,8 @@
 "use client";
-import { NotebookText, Plus, Trash } from "lucide-react";
+import { NotebookText, Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { Button } from "~/components/ui/button";
 
+import { type Page } from "~/lib/types";
 import {
   Command,
   CommandEmpty,
@@ -60,14 +60,7 @@ function Item({
   selected,
 }: {
   notebookId: number;
-  page: {
-    id: number;
-    title: string | null;
-    createdAt: Date;
-    updatedAt: Date | null;
-    content: string | null;
-    notebookId: number;
-  };
+  page: Page;
   selected: boolean;
 }) {
   const router = useRouter();
