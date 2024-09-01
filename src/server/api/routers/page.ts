@@ -11,6 +11,27 @@ const CreatePageSchema = z.object({
 });
 
 export const pageRouter = createTRPCRouter({
+  delete: publicProcedure
+    .input(
+      z.object({
+        id: z.number().min(1),
+        notebookId: z.number().min(1),
+      }),
+    )
+    .mutation(async ({ ctx, input }) => {
+      const page = await ctx.db.query.pages.findFirst({
+        where: (pages, { eq }) => eq(pages.id, input.id),
+      });
+
+      // Ensure that the page belongs to the notebook
+      if (page?.notebookId !== input.notebookId) return false;
+
+      console.log("Delete page:", page);
+
+      await ctx.db.delete(pages).where(eq(pages.id, input.id));
+      return true;
+    }),
+
   create: publicProcedure
     .input(CreatePageSchema)
     .mutation(async ({ ctx, input }) => {
@@ -26,11 +47,11 @@ export const pageRouter = createTRPCRouter({
     .input(z.object({ notebookId: z.number().min(1) }))
     .query(async ({ ctx, input }) => {
       console.log("Get all pages:", input);
-      const post = await ctx.db.query.pages.findMany({
+      const page = await ctx.db.query.pages.findMany({
         where: (pages, { eq }) => eq(pages.notebookId, input.notebookId),
         orderBy: (pages, { asc }) => [asc(pages.title)],
       });
-      return post ?? null;
+      return page ?? null;
     }),
 
   getOne: publicProcedure
@@ -42,14 +63,14 @@ export const pageRouter = createTRPCRouter({
     )
     .query(async ({ ctx, input }) => {
       console.log("Get one page:", input);
-      const post = await ctx.db.query.pages.findFirst({
+      const page = await ctx.db.query.pages.findFirst({
         where: (pages, { eq }) => eq(pages.id, input.id),
       });
 
       // Ensure that the page belongs to the notebook
-      if (post?.notebookId !== input.notebookId) return null;
+      if (page?.notebookId !== input.notebookId) return null;
 
-      return post ?? null;
+      return page ?? null;
     }),
 
   updateContent: publicProcedure

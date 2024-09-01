@@ -15,6 +15,7 @@ import { NewPageForm } from "~/app/notebook/[notebookId]/_components/newPageForm
 import { Editor } from "~/components/editor";
 import { Notebook, Page } from "~/lib/types";
 import { EditorHeader } from "~/components/editor/header";
+import { useRouter } from "next/navigation";
 
 let updateTimeout: NodeJS.Timeout | null = null;
 export function EditorUI({
@@ -29,6 +30,14 @@ export function EditorUI({
   const [dialogOpen, setDialogOpen] = useState<boolean>(false);
   const utils = api.useUtils();
 
+  const router = useRouter();
+
+  const deletePage = api.page.delete.useMutation({
+    onSuccess: async () => {
+      await utils.page.invalidate();
+      router.push(`/notebook/${notebook.id}`);
+    },
+  });
   const updateNotebook = api.page.updateContent.useMutation({
     onSuccess: async () => {
       await utils.page.invalidate();
@@ -38,6 +47,12 @@ export function EditorUI({
   function handleNewPage() {
     console.log("New Page");
     setDialogOpen(true);
+  }
+
+  function handleDeletePage() {
+    if (selectedPage === null) return;
+    console.log("Delete Page:", selectedPage);
+    deletePage.mutate({ id: selectedPage, notebookId: notebook.id });
   }
 
   function handleUpdateContent(content: JSONContent) {
@@ -82,11 +97,14 @@ export function EditorUI({
         onNewPage={handleNewPage}
       />
       <div className="flex h-full flex-1 flex-col">
-        {selectedPage !== null && (
-          <Editor
-            initialValue={initialContent}
-            onChange={handleUpdateContent}
-          />
+        {selectedPage !== null && page && (
+          <>
+            <EditorHeader page={page} onDelete={handleDeletePage} />
+            <Editor
+              initialValue={initialContent}
+              onChange={handleUpdateContent}
+            />
+          </>
         )}
       </div>
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
