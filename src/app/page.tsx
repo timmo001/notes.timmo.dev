@@ -7,6 +7,8 @@ import Link from "next/link";
 import { api } from "~/trpc/server";
 import { TextFadeInUpGrab } from "~/components/animations/text";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const user = await currentUser();
 

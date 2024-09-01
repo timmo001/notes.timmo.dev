@@ -5,6 +5,8 @@ import { api } from "~/trpc/server";
 import { TextFadeInUpGrab } from "~/components/animations/text";
 import { EditorUI } from "~/app/notebook/[notebookId]/_components/editorUI";
 
+export const dynamic = "force-dynamic";
+
 export default async function Notebook({
   params,
 }: {
