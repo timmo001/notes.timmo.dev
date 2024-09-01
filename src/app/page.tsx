@@ -9,11 +9,10 @@ import { TextFadeInUpGrab } from "~/components/animations/text";
 
 export default async function Home() {
   const user = await currentUser();
-  if (!user) notFound();
 
-  const notebooks = await api.notebook.getAll({ userId: user.id });
+  const notebooks = !user ? [] : await api.notebook.getAll({ userId: user.id });
 
-  void api.notebook.getAll.prefetch({ userId: user.id });
+  if (user) void api.notebook.getAll.prefetch({ userId: user.id });
 
   return (
     <>
