@@ -38,7 +38,14 @@ export function EditorUI({
       router.push(`/notebook/${notebook.id}`);
     },
   });
-  const updateNotebook = api.page.updateContent.useMutation({
+
+  const updatePageTitle = api.page.updateTitle.useMutation({
+    onSuccess: async () => {
+      await utils.page.invalidate();
+    },
+  });
+
+  const updatePageContent = api.page.updateContent.useMutation({
     onSuccess: async () => {
       await utils.page.invalidate();
     },
@@ -55,11 +62,20 @@ export function EditorUI({
     deletePage.mutate({ id: selectedPage, notebookId: notebook.id });
   }
 
+  function handleUpdateTitle(title: string) {
+    if (updateTimeout) clearTimeout(updateTimeout);
+    updateTimeout = setTimeout(() => {
+      console.log("Saving title:", title);
+      updatePageTitle.mutate({ id: selectedPage!, title });
+      updateTimeout = null;
+    }, 400);
+  }
+
   function handleUpdateContent(content: JSONContent) {
     if (updateTimeout) clearTimeout(updateTimeout);
     updateTimeout = setTimeout(() => {
       console.log("Saving content:", content);
-      updateNotebook.mutate({
+      updatePageContent.mutate({
         id: selectedPage!,
         content: JSON.stringify(content),
       });
@@ -99,7 +115,11 @@ export function EditorUI({
       <div className="flex h-full flex-1 flex-col">
         {selectedPage !== null && page && (
           <>
-            <EditorHeader page={page} onDelete={handleDeletePage} />
+            <EditorHeader
+              page={page}
+              onDelete={handleDeletePage}
+              onUpdateTitle={handleUpdateTitle}
+            />
             <Editor
               initialValue={initialContent}
               onChange={handleUpdateContent}

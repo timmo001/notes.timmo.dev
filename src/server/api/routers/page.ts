@@ -73,6 +73,22 @@ export const pageRouter = createTRPCRouter({
       return page ?? null;
     }),
 
+  updateTitle: publicProcedure
+    .input(
+      z.object({
+        id: z.number().min(1),
+        title: z.string().optional(),
+      }),
+    )
+    .mutation(async ({ ctx, input }) => {
+      await ctx.db
+        .update(pages)
+        .set({
+          title: input.title,
+        })
+        .where(eq(pages.id, input.id));
+    }),
+
   updateContent: publicProcedure
     .input(
       z.object({
