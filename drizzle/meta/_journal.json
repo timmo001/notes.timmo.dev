@@ -22,6 +22,13 @@
       "when": 1724598708865,
       "tag": "0002_demonic_molecule_man",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1725188324131,
+      "tag": "0003_handy_gambit",
+      "breakpoints": true
     }
   ]
 }
