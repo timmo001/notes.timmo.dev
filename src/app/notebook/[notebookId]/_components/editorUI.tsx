@@ -19,8 +19,8 @@ import { useRouter } from "next/navigation";
 
 let updateTimeout: NodeJS.Timeout | null = null;
 export function EditorUI({
-  notebook,
-  pages,
+  notebook: initialNotebook,
+  pages: initialPages,
   selectedPage,
 }: {
   notebook: Notebook;
@@ -28,6 +28,9 @@ export function EditorUI({
   selectedPage: number | null;
 }) {
   const [dialogOpen, setDialogOpen] = useState<boolean>(false);
+  const [notebook, setNotebook] = useState<Notebook>(initialNotebook);
+  const [pages, setPages] = useState<Array<Page>>(initialPages);
+
   const utils = api.useUtils();
 
   const router = useRouter();
@@ -63,6 +66,16 @@ export function EditorUI({
   }
 
   function handleUpdateTitle(title: string) {
+    if (selectedPage === null) return;
+
+    // Update the title locally
+    setPages((prevPages) =>
+      prevPages.map((page) =>
+        page.id === selectedPage ? { ...page, title } : page,
+      ),
+    );
+
+    // Update the title after a delay to prevent too many requests
     if (updateTimeout) clearTimeout(updateTimeout);
     updateTimeout = setTimeout(() => {
       console.log("Saving title:", title);
@@ -72,6 +85,9 @@ export function EditorUI({
   }
 
   function handleUpdateContent(content: JSONContent) {
+    if (selectedPage === null) return;
+
+    // Update the content after a delay to prevent too many requests
     if (updateTimeout) clearTimeout(updateTimeout);
     updateTimeout = setTimeout(() => {
       console.log("Saving content:", content);
