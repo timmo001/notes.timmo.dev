@@ -19,14 +19,7 @@ export function Navigation({
   onNewPage,
 }: {
   notebookId: number;
-  pages: Array<{
-    id: number;
-    title: string | null;
-    createdAt: Date;
-    updatedAt: Date | null;
-    content: string | null;
-    notebookId: number;
-  }>;
+  pages: Array<Page>;
   selectedPage: number | null;
   onNewPage: () => void;
 }) {
