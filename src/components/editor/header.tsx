@@ -99,7 +99,7 @@ export function EditorHeader({
           </AlertDialogTrigger>
           <AlertDialogContent>
             <AlertDialogHeader>
-              <AlertDialogTitle>Delete Page</AlertDialogTitle>
+              <AlertDialogTitle>Delete "{page.title}"</AlertDialogTitle>
               <AlertDialogDescription>
                 Are you sure you want to delete this page?
               </AlertDialogDescription>
