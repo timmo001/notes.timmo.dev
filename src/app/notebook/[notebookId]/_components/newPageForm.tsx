@@ -32,13 +32,7 @@ const FormSchema = z.object({
     }),
 });
 
-export function NewPageForm({
-  notebookId,
-  onCancel,
-}: {
-  notebookId: number;
-  onCancel: () => void;
-}) {
+export function NewPageForm({ notebookId }: { notebookId: number }) {
   const auth = useAuth();
   const router = useRouter();
   const utils = api.useUtils();
@@ -89,9 +83,6 @@ export function NewPageForm({
           )}
         />
         <DialogFooter>
-          <Button type="button" onClick={onCancel}>
-            Cancel
-          </Button>
           <Button type="submit">Create page</Button>
         </DialogFooter>
       </form>

@@ -3,15 +3,8 @@ import { Suspense, useMemo, useState } from "react";
 import { JSONContent } from "novel";
 
 import { api } from "~/trpc/react";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "~/components/ui/dialog";
+
 import { Navigation } from "~/app/notebook/[notebookId]/_components/navigation";
-import { NewPageForm } from "~/app/notebook/[notebookId]/_components/newPageForm";
 import { Editor } from "~/components/editor";
 import { Notebook, Page } from "~/lib/types";
 import { EditorHeader } from "~/components/editor/header";
@@ -27,7 +20,6 @@ export function EditorUI({
   pages: Array<Page>;
   selectedPage: number | null;
 }) {
-  const [dialogOpen, setDialogOpen] = useState<boolean>(false);
   const [notebook, setNotebook] = useState<Notebook>(initialNotebook);
   const [pages, setPages] = useState<Array<Page>>(initialPages);
 
@@ -53,11 +45,6 @@ export function EditorUI({
       await utils.page.invalidate();
     },
   });
-
-  function handleNewPage() {
-    console.log("New Page");
-    setDialogOpen(true);
-  }
 
   function handleDeletePage() {
     if (selectedPage === null) return;
@@ -126,7 +113,6 @@ export function EditorUI({
         notebookId={notebook.id}
         pages={pages}
         selectedPage={selectedPage}
-        onNewPage={handleNewPage}
       />
       <div className="flex h-full flex-1 flex-col">
         {selectedPage !== null && page && (
@@ -143,20 +129,6 @@ export function EditorUI({
           </>
         )}
       </div>
-      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="sm:max-w-[425px]">
-          <DialogHeader>
-            <DialogTitle>New Page</DialogTitle>
-            <DialogDescription>
-              Create a new page in the notebook.
-            </DialogDescription>
-          </DialogHeader>
-          <NewPageForm
-            notebookId={notebook.id}
-            onCancel={() => setDialogOpen(false)}
-          />
-        </DialogContent>
-      </Dialog>
     </Suspense>
   );
 }
