@@ -2414,10 +2414,10 @@ dot-case@^3.0.4:
     no-case "^3.0.4"
     tslib "^2.0.3"
 
-drizzle-kit@0.24.2:
-  version "0.24.2"
-  resolved "https://registry.npmjs.org/drizzle-kit/-/drizzle-kit-0.24.2.tgz"
-  integrity sha512-nXOaTSFiuIaTMhS8WJC2d4EBeIcN9OSt2A2cyFbQYBAZbi7lRsVGJNqDpEwPqYfJz38yxbY/UtbvBBahBfnExQ==
+drizzle-kit@0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/drizzle-kit/-/drizzle-kit-0.25.0.tgz#f81d5f5035b1365e56d09754e747f71e619fb324"
+  integrity sha512-Rcf0nYCAKizwjWQCY+d3zytyuTbDb81NcaPor+8NebESlUz1+9W3uGl0+r9FhU4Qal5Zv9j/7neXCSCe7DHzjA==
   dependencies:
     "@drizzle-team/brocli" "^0.10.1"
     "@esbuild-kit/esm-loader" "^2.5.5"
