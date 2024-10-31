@@ -85,10 +85,10 @@
   resolved "https://registry.npmjs.org/@daybrush/utils/-/utils-1.13.0.tgz"
   integrity sha512-ALK12C6SQNNHw1enXK+UO8bdyQ+jaWNQ1Af7Z3FNxeAwjYhQT7do+TRE4RASAJ3ObaS2+TJ7TXR3oz2Gzbw0PQ==
 
-"@drizzle-team/brocli@^0.10.1":
-  version "0.10.1"
-  resolved "https://registry.npmjs.org/@drizzle-team/brocli/-/brocli-0.10.1.tgz"
-  integrity sha512-AHy0vjc+n/4w/8Mif+w86qpppHuF3AyXbcWW+R/W7GNA3F5/p2nuhlkCJaTXSLZheB4l1rtHzOfr9A7NwoR/Zg==
+"@drizzle-team/brocli@^0.10.2":
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/@drizzle-team/brocli/-/brocli-0.10.2.tgz#9757c006a43daaa6f45512e6cf5fabed36fb9da7"
+  integrity sha512-z33Il7l5dKjUgGULTqBsQBQwckHh5AbIuxhdsIxDDiZAzBOrZO6q9ogcWC65kU382AfynTfgNumVcNIjuIua6w==
 
 "@egjs/agent@^2.2.1":
   version "2.4.4"
@@ -2251,12 +2251,12 @@ dot-case@^3.0.4:
     no-case "^3.0.4"
     tslib "^2.0.3"
 
-drizzle-kit@0.26.2:
-  version "0.26.2"
-  resolved "https://registry.yarnpkg.com/drizzle-kit/-/drizzle-kit-0.26.2.tgz#1a2ecb5419a240e7d9a90ee9fea6bbbf29ec8bf7"
-  integrity sha512-cMq8omEKywjIy5KcqUo6LvEFxkl8/zYHsgYjFVXjmPWWtuW4blcz+YW9+oIhoaALgs2ebRjzXwsJgN9i6P49Dw==
+drizzle-kit@0.27.0:
+  version "0.27.0"
+  resolved "https://registry.yarnpkg.com/drizzle-kit/-/drizzle-kit-0.27.0.tgz#6fab6a7f2286ef4390416dbd7b0f1997d5fb4656"
+  integrity sha512-vJJCPvKGLFcmOFBELKqcRng3Fc6qTOaKNAqetLEoysD7HjlSlJOWwM54FJlhpqA+cZcIdsL8r9/7v9JIFfs3MA==
   dependencies:
-    "@drizzle-team/brocli" "^0.10.1"
+    "@drizzle-team/brocli" "^0.10.2"
     "@esbuild-kit/esm-loader" "^2.5.5"
     esbuild "^0.19.7"
     esbuild-register "^3.5.0"
