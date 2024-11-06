@@ -21,44 +21,44 @@
   dependencies:
     "@egjs/component" "^3.0.2"
 
-"@clerk/backend@1.15.6":
-  version "1.15.6"
-  resolved "https://registry.yarnpkg.com/@clerk/backend/-/backend-1.15.6.tgz#839c267eea994ee6630e019870ccadd4ef197203"
-  integrity sha512-Hn+t8m4fyso6+S6jherWZ2FYEF3t5i6HJuPmqyKXMTg9Vfpui/58j3Xj5HtDFVGjoszV2kuNMDVFK5YJg5jhFg==
+"@clerk/backend@1.15.7":
+  version "1.15.7"
+  resolved "https://registry.yarnpkg.com/@clerk/backend/-/backend-1.15.7.tgz#2aa2f3f0c0e63fa5dce86152551ab6a23d7d48cd"
+  integrity sha512-srJZE3fMY9cHgTsFpO5rxFJmX30GMMplML7M8hvP58y5s4D+8OgqJmAPK3FsqME4ABp9rIXmDCbxMZav9DhP2g==
   dependencies:
-    "@clerk/shared" "2.11.4"
+    "@clerk/shared" "2.11.5"
     "@clerk/types" "4.30.0"
     cookie "0.7.0"
     snakecase-keys "5.4.4"
     tslib "2.4.1"
 
-"@clerk/clerk-react@5.15.0":
-  version "5.15.0"
-  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-5.15.0.tgz#d2a8640bd625117e7ca6e25fea83a9560e64cb61"
-  integrity sha512-ls4YCq5ynlZTbT4aiUzYOBMtF+hzwep+csMkZtytB5dHPLxMFkuK4hX24QiI295R1RHUZJMkvSPgpVVwxKvOww==
+"@clerk/clerk-react@5.15.1":
+  version "5.15.1"
+  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-5.15.1.tgz#3e8e1fd8918d9e11867cd5b297e9fc5172be1fa7"
+  integrity sha512-p6PLh6SBREEknCzi4I2pyYXRy0OLS7bJ4X9flW1877evYJgyJuirBf8j/RTWg5YzCbVx+GPiZhdlZSCNzH+5Cg==
   dependencies:
-    "@clerk/shared" "2.11.4"
+    "@clerk/shared" "2.11.5"
     "@clerk/types" "4.30.0"
     tslib "2.4.1"
 
-"@clerk/nextjs@6.2.0":
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-6.2.0.tgz#1754fb14f743fef30b70459fb854fd76983eb1d5"
-  integrity sha512-YuySerwbOCJRWzVBRC2iJ6V451w+NDV2mhH/6HZVROcufSa0Xif6nuaINXhJP4z4ogLnFWxpAaags/3ejw+Jew==
+"@clerk/nextjs@6.2.1":
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-6.2.1.tgz#b20d30c24bdb8a1286e7af134331f81e27f8875b"
+  integrity sha512-/iYWwA0dWzrJYI7sCKtYkgAMYfFPPiDkWJY+SGvfmDxubL2yny+JARRiS/vYjDmtjOGuJ2JRseisLDKoZwAGAw==
   dependencies:
-    "@clerk/backend" "1.15.6"
-    "@clerk/clerk-react" "5.15.0"
-    "@clerk/shared" "2.11.4"
+    "@clerk/backend" "1.15.7"
+    "@clerk/clerk-react" "5.15.1"
+    "@clerk/shared" "2.11.5"
     "@clerk/types" "4.30.0"
     crypto-js "4.2.0"
     ezheaders "0.1.0"
     server-only "0.0.1"
     tslib "2.4.1"
 
-"@clerk/shared@2.11.4":
-  version "2.11.4"
-  resolved "https://registry.yarnpkg.com/@clerk/shared/-/shared-2.11.4.tgz#3b4b2a66c6d4c7e87f0393e54dda726f45327b2d"
-  integrity sha512-7/Va9B2pbs69qQd9U9ZPoubxAU5rb9wqnEMbRvc72rnRiQBZElvEu02O1pHpBukw0pk09KGj6BbI0H7545V9sA==
+"@clerk/shared@2.11.5":
+  version "2.11.5"
+  resolved "https://registry.yarnpkg.com/@clerk/shared/-/shared-2.11.5.tgz#ac2bf21620b2c7eda79bdaa9f0b4c4f5c0e1db6d"
+  integrity sha512-GQiqKgIBhqnXfLmohNbDvTz8GNK/nYRSWciGArdezaB+w2q+QpQyo2v1Y7Bh6j608iKZCnc4jG4yxcAI/pRQDA==
   dependencies:
     "@clerk/types" "4.30.0"
     glob-to-regexp "0.4.1"
