@@ -21,10 +21,10 @@
   dependencies:
     "@egjs/component" "^3.0.2"
 
-"@clerk/backend@1.16.1":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@clerk/backend/-/backend-1.16.1.tgz#fbcbb6958e45cfcf23c904c881d3f5a04a656470"
-  integrity sha512-Rrw8LLHk5L1gHhWT/nr5zuWvPapvgdTZ4O35v22D8eLaTdYLJOptHquBwaJ9R9WMmYxDi35lm9a4oVk0t5h7BQ==
+"@clerk/backend@1.16.2":
+  version "1.16.2"
+  resolved "https://registry.yarnpkg.com/@clerk/backend/-/backend-1.16.2.tgz#c3174eee08ae5ded0ccb12a5b7472315350e3931"
+  integrity sha512-Wsl1HGBQRMwMvYPRp+zbO6yWIQokcup3pktVgA/OUN/lhoAgZ/cUugN/4uveWruMtMi439A7tQlaupt1iyUGNw==
   dependencies:
     "@clerk/shared" "2.12.1"
     "@clerk/types" "4.32.0"
@@ -41,12 +41,12 @@
     "@clerk/types" "4.32.0"
     tslib "2.4.1"
 
-"@clerk/nextjs@6.3.1":
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-6.3.1.tgz#6d6b3bbd096617ac1b8bad83fb89f833df12a46c"
-  integrity sha512-OEws5LiKYamiC+kaLUxBVz8KKXimzz+iJoVrA0+6iPn4ouve3TsVWOt9lkBLnpDX4ayqYDrGu7Wnj/ZEGVxqmg==
+"@clerk/nextjs@6.3.2":
+  version "6.3.2"
+  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-6.3.2.tgz#7f75b9a90b7bcf54e40648c8e10c80bc95c5695e"
+  integrity sha512-5OY/JpNXaLRDqpxC/iYX3eohfl9Y6Q3IxCTkjfRvhg6Hibg4l1F33JnNRSdl6JccMsoNYrj4kZZSt0wg7ipOTw==
   dependencies:
-    "@clerk/backend" "1.16.1"
+    "@clerk/backend" "1.16.2"
     "@clerk/clerk-react" "5.15.3"
     "@clerk/shared" "2.12.1"
     "@clerk/types" "4.32.0"
