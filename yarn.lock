@@ -41,10 +41,10 @@
     "@clerk/types" "^4.39.4"
     tslib "2.4.1"
 
-"@clerk/nextjs@6.9.2":
-  version "6.9.2"
-  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-6.9.2.tgz#fdb387424ca1d315b69001303c285cdb533913ea"
-  integrity sha512-1OoG+UGmU2kVPirC6Rh1My/cerwoxxSUxBJWJMvEbyXfM2hT0fqEl7L+BoTGSpJcJlGBw5e7tvtgHIqA4cUfZw==
+"@clerk/nextjs@6.9.3":
+  version "6.9.3"
+  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-6.9.3.tgz#fc02d78eab8b9f37e1787ff4b56962540eaba5b7"
+  integrity sha512-ws6ZeT9/zgBRSQYWx9wtf8gpxvqI8KUEkF6gCTKcoKMPAtLv6Wkuk5xxgIAxhwUkBxdiwJisGfUcJ8AIkiR+8w==
   dependencies:
     "@clerk/backend" "^1.21.2"
     "@clerk/clerk-react" "^5.20.2"
@@ -627,11 +627,6 @@
   dependencies:
     "@babel/runtime" "^7.13.10"
 
-"@radix-ui/react-compose-refs@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/@radix-ui/react-compose-refs/-/react-compose-refs-1.1.0.tgz"
-  integrity sha512-b4inOtiaOnYf9KWyO3jAeeCG6FeyfY6ldiEPanbUjWd+xIk5wZeHa8yVwmrJ2vderhu/BQvzCrJI0lHd+wIiqw==
-
 "@radix-ui/react-compose-refs@1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@radix-ui/react-compose-refs/-/react-compose-refs-1.1.1.tgz#6f766faa975f8738269ebb8a23bad4f5a8d2faec"
@@ -906,13 +901,6 @@
     "@babel/runtime" "^7.13.10"
     "@radix-ui/react-slot" "1.0.0"
 
-"@radix-ui/react-primitive@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/@radix-ui/react-primitive/-/react-primitive-2.0.0.tgz"
-  integrity sha512-ZSpFm0/uHa8zTvKBDjLFWLo8dkr4MBsiDLz0g3gMUwqgLHz9rTaRRGYDgvZPtBJgYCBKXkS9fzmoySgr8CO6Cw==
-  dependencies:
-    "@radix-ui/react-slot" "1.1.0"
-
 "@radix-ui/react-primitive@2.0.1", "@radix-ui/react-primitive@^2.0.0":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@radix-ui/react-primitive/-/react-primitive-2.0.1.tgz#6d9efc550f7520135366f333d1e820cf225fad9e"
@@ -964,13 +952,6 @@
   dependencies:
     "@babel/runtime" "^7.13.10"
     "@radix-ui/react-compose-refs" "1.0.0"
-
-"@radix-ui/react-slot@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.1.0.tgz"
-  integrity sha512-FUCf5XMfmW4dtYl69pdS4DbxKy8nj4M7SafBgPllysxmdachynNflAdp/gCsnYWNDnge6tI9onzMp5ARYc1KNw==
-  dependencies:
-    "@radix-ui/react-compose-refs" "1.1.0"
 
 "@radix-ui/react-slot@1.1.1", "@radix-ui/react-slot@^1.0.2":
   version "1.1.1"
