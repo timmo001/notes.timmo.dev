@@ -21,45 +21,45 @@
   dependencies:
     "@egjs/component" "^3.0.2"
 
-"@clerk/backend@^1.23.4":
-  version "1.23.4"
-  resolved "https://registry.yarnpkg.com/@clerk/backend/-/backend-1.23.4.tgz#85c11e9b730ebcd0aff87a7fe0b42db95ab4cd4b"
-  integrity sha512-KrcoHzuxsnsKzzf8c2i/VHMJlnfU8BfEPpuzNJEDVJRSFzIs81axVqXdhdOyzuSirjpBgMt4gGIjfJWQdPNAPQ==
+"@clerk/backend@^1.23.5":
+  version "1.23.5"
+  resolved "https://registry.yarnpkg.com/@clerk/backend/-/backend-1.23.5.tgz#06b25a955617000a5c7fb516afa3d8b042153863"
+  integrity sha512-3HVYa1qiOIny+45V5UBwVfMRZDXl4deVfjFMPvmAYbAiNqY39TgtHdMnDsGZF09eOUnnpTu/6jV4doPLdmWHWg==
   dependencies:
-    "@clerk/shared" "^2.20.11"
-    "@clerk/types" "^4.41.2"
+    "@clerk/shared" "^2.20.12"
+    "@clerk/types" "^4.42.0"
     cookie "1.0.2"
     snakecase-keys "8.0.1"
     tslib "2.4.1"
 
-"@clerk/clerk-react@^5.22.3":
-  version "5.22.3"
-  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-5.22.3.tgz#4c0dc6abb188dd660a862a0279162916b62f6a72"
-  integrity sha512-1RHH5W6UOMfmRq2sC1n1lVa12kHbmE6T2FfyHbSWOwcaUPJAxGDj3nakl4VJuDLHej9hXfsNjjUVCN5D2ybBBw==
+"@clerk/clerk-react@^5.22.4":
+  version "5.22.4"
+  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-5.22.4.tgz#c7ca39b270903099d1bf8652b253da39ccfc0d56"
+  integrity sha512-uDUczpvP4PgTp3mDEd+ITka4yVdQUrU3pVxWBb4Q81XGHDF9GCPb5XbDjV0iR8gB0txI9xopXwUez5/T4VZRVA==
   dependencies:
-    "@clerk/shared" "^2.20.11"
-    "@clerk/types" "^4.41.2"
+    "@clerk/shared" "^2.20.12"
+    "@clerk/types" "^4.42.0"
     tslib "2.4.1"
 
-"@clerk/nextjs@6.9.15":
-  version "6.9.15"
-  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-6.9.15.tgz#9092bf1a5984742b3969ff01f0384ae790bf29da"
-  integrity sha512-eAtbtkLv8efGSgG6EuO38ipz7Vrjt6Z5GDfetXg7vhVZg8vbboffuHWiZni1bTnrxRKVFdT9NihjCfFLW1pcoQ==
+"@clerk/nextjs@6.10.0":
+  version "6.10.0"
+  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-6.10.0.tgz#657972e50588583a02721b63a5d22355a4d9e35e"
+  integrity sha512-s6srzAxMStgP2UBsgSNyWECt+c7s/Zq+/qLAk05O17HXTjb1ydmK/cGxJI5JS9MYv49Z88Ct3AL9CiUbGv/0bA==
   dependencies:
-    "@clerk/backend" "^1.23.4"
-    "@clerk/clerk-react" "^5.22.3"
-    "@clerk/shared" "^2.20.11"
-    "@clerk/types" "^4.41.2"
+    "@clerk/backend" "^1.23.5"
+    "@clerk/clerk-react" "^5.22.4"
+    "@clerk/shared" "^2.20.12"
+    "@clerk/types" "^4.42.0"
     crypto-js "4.2.0"
     server-only "0.0.1"
     tslib "2.4.1"
 
-"@clerk/shared@^2.20.11":
-  version "2.20.11"
-  resolved "https://registry.yarnpkg.com/@clerk/shared/-/shared-2.20.11.tgz#59fc943e58462826435d689c10ba783259aac967"
-  integrity sha512-nUqDJuBSOhm1+7KslVr3vkIpc3bAJ1L0VOB4l9vH6igg8MqRz5EFtFjbp3ayNFtAL/DVxGZ3EeJA7JJ8L1zcWQ==
+"@clerk/shared@^2.20.12":
+  version "2.20.12"
+  resolved "https://registry.yarnpkg.com/@clerk/shared/-/shared-2.20.12.tgz#ea2b43c76d2ce3d9bd126a2e9d0bb0799b6a6abe"
+  integrity sha512-uy9Z2h0VXbQ4xwjj8mKuQSwm8MEFTAec+3gu4MSTyc1WboaPfX3MnO3qjqJEwu/oQkakocVI0P3nViYbXokZtQ==
   dependencies:
-    "@clerk/types" "^4.41.2"
+    "@clerk/types" "^4.42.0"
     dequal "2.0.3"
     glob-to-regexp "0.4.1"
     js-cookie "3.0.5"
@@ -74,10 +74,10 @@
     "@clerk/types" "^4.41.2"
     tslib "2.4.1"
 
-"@clerk/types@^4.41.2":
-  version "4.41.2"
-  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-4.41.2.tgz#e0f0d36fd991230f682c9e41178f7fd2711efbef"
-  integrity sha512-8hvNzyeSa2sENQ86jHXTSnGKfhr9OHcIcm4w7bU4pAhCqF2aLYi9AZGNY4nvBcS3zPw1e8OLMiRKi5qhZrdt+g==
+"@clerk/types@^4.41.2", "@clerk/types@^4.42.0":
+  version "4.42.0"
+  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-4.42.0.tgz#e45c3fdec2ccdf886fca6f5c7d48d9b407bf82b5"
+  integrity sha512-SPBRHdP+ZggeudncbSj8KLOZ5PdVmtgZhL+tXremVJrETi9WHpf1UOYgnIHl+clp6GZC2IQM4tq57RSrHf0Oew==
   dependencies:
     csstype "3.1.1"
 
@@ -4458,17 +4458,6 @@ react-remove-scroll@2.5.4:
     use-sidecar "^1.1.2"
 
 react-remove-scroll@^2.6.1, react-remove-scroll@^2.6.2:
-  version "2.6.3"
-  resolved "https://registry.yarnpkg.com/react-remove-scroll/-/react-remove-scroll-2.6.3.tgz#df02cde56d5f2731e058531f8ffd7f9adec91ac2"
-  integrity sha512-pnAi91oOk8g8ABQKGF5/M9qxmmOPxaAnopyTHYfqYEwJhyFrbbBtHuSgtKEoH0jpcxx5o3hXqH1mNd9/Oi+8iQ==
-  dependencies:
-    react-remove-scroll-bar "^2.3.7"
-    react-style-singleton "^2.2.3"
-    tslib "^2.1.0"
-    use-callback-ref "^1.3.3"
-    use-sidecar "^1.1.3"
-
-react-remove-scroll@^2.6.2:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/react-remove-scroll/-/react-remove-scroll-2.6.3.tgz#df02cde56d5f2731e058531f8ffd7f9adec91ac2"
   integrity sha512-pnAi91oOk8g8ABQKGF5/M9qxmmOPxaAnopyTHYfqYEwJhyFrbbBtHuSgtKEoH0jpcxx5o3hXqH1mNd9/Oi+8iQ==
