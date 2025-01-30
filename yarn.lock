@@ -2252,10 +2252,10 @@ drizzle-kit@0.30.4:
     esbuild "^0.19.7"
     esbuild-register "^3.5.0"
 
-drizzle-orm@0.39.0:
-  version "0.39.0"
-  resolved "https://registry.yarnpkg.com/drizzle-orm/-/drizzle-orm-0.39.0.tgz#bf9422c981822a9c04158d64a9889e2d8128f7ae"
-  integrity sha512-kkZwo3Jvht0fdJD/EWGx0vYcEK0xnGrlNVaY07QYluRZA9N21B9VFbY+54bnb/1xvyzcg97tE65xprSAP/fFGQ==
+drizzle-orm@0.39.1:
+  version "0.39.1"
+  resolved "https://registry.yarnpkg.com/drizzle-orm/-/drizzle-orm-0.39.1.tgz#92642e4c7b8b3240630d9475d9175563072e53c6"
+  integrity sha512-2bDHlzTY31IDmrYn8i+ZZrxK8IyBD4mPZ7JmZdVDQj2tpBZXs/gxB/1kK5pSvkjxPUMNOVsTnoGkSltgjuJwcA==
 
 eastasianwidth@^0.2.0:
   version "0.2.0"
