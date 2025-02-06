@@ -901,12 +901,19 @@
     "@babel/runtime" "^7.13.10"
     "@radix-ui/react-slot" "1.0.0"
 
-"@radix-ui/react-primitive@2.0.1", "@radix-ui/react-primitive@^2.0.0":
+"@radix-ui/react-primitive@2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@radix-ui/react-primitive/-/react-primitive-2.0.1.tgz#6d9efc550f7520135366f333d1e820cf225fad9e"
   integrity sha512-sHCWTtxwNn3L3fH8qAfnF3WbUZycW93SM1j3NFDzXBiz8D6F5UTTy8G1+WFEaiCdvCVRJWj6N2R4Xq6HdiHmDg==
   dependencies:
     "@radix-ui/react-slot" "1.1.1"
+
+"@radix-ui/react-primitive@2.0.2", "@radix-ui/react-primitive@^2.0.0":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-primitive/-/react-primitive-2.0.2.tgz#ac8b7854d87b0d7af388d058268d9a7eb64ca8ef"
+  integrity sha512-Ec/0d38EIuvDF+GZjcMU/Ze6MxntVJYO/fRlCPhCaVUyPY9WTalHJw54tp9sXeJo3tlShWpy41vQRgLRGOuz+w==
+  dependencies:
+    "@radix-ui/react-slot" "1.1.2"
 
 "@radix-ui/react-roving-focus@1.1.1":
   version "1.1.1"
@@ -923,10 +930,10 @@
     "@radix-ui/react-use-callback-ref" "1.1.0"
     "@radix-ui/react-use-controllable-state" "1.1.0"
 
-"@radix-ui/react-scroll-area@1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@radix-ui/react-scroll-area/-/react-scroll-area-1.2.2.tgz#28e34fd4d83e9de5d987c5e8914a7bd8be9546a5"
-  integrity sha512-EFI1N/S3YxZEW/lJ/H1jY3njlvTd8tBmgKEn4GHi51+aMm94i6NmAJstsm5cu3yJwYqYc93gpCPm21FeAbFk6g==
+"@radix-ui/react-scroll-area@1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-scroll-area/-/react-scroll-area-1.2.3.tgz#6a9a7897add739ce84b517796ee345d495893d3f"
+  integrity sha512-l7+NNBfBYYJa9tNqVcP2AGvxdE3lmE6kFTBXdvHgUaZuy+4wGCL1Cl2AfaR7RKyimj7lZURGLwFO59k4eBnDJQ==
   dependencies:
     "@radix-ui/number" "1.1.0"
     "@radix-ui/primitive" "1.1.1"
@@ -934,7 +941,7 @@
     "@radix-ui/react-context" "1.1.1"
     "@radix-ui/react-direction" "1.1.0"
     "@radix-ui/react-presence" "1.1.2"
-    "@radix-ui/react-primitive" "2.0.1"
+    "@radix-ui/react-primitive" "2.0.2"
     "@radix-ui/react-use-callback-ref" "1.1.0"
     "@radix-ui/react-use-layout-effect" "1.1.0"
 
@@ -957,6 +964,13 @@
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@radix-ui/react-slot/-/react-slot-1.1.1.tgz#ab9a0ffae4027db7dc2af503c223c978706affc3"
   integrity sha512-RApLLOcINYJA+dMVbOju7MYv1Mb2EBp2nH4HdDzXTSyaR5optlm6Otrz1euW3HbdOR8UmmFK06TD+A9frYWv+g==
+  dependencies:
+    "@radix-ui/react-compose-refs" "1.1.1"
+
+"@radix-ui/react-slot@1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-slot/-/react-slot-1.1.2.tgz#daffff7b2bfe99ade63b5168407680b93c00e1c6"
+  integrity sha512-YAKxaiGsSQJ38VzKH86/BPRC4rh+b1Jpa+JneA5LRE7skmLPNAyeG8kPJj/oo4STLvlrs8vkf/iYyc3A5stYCQ==
   dependencies:
     "@radix-ui/react-compose-refs" "1.1.1"
 
