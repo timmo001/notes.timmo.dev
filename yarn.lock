@@ -1405,10 +1405,10 @@
   resolved "https://registry.npmjs.org/@trpc/react-query/-/react-query-11.0.0-rc.446.tgz"
   integrity sha512-QPhbCJj5GvtOgLnjNApJFldcIzzubGP735fNVOE70ZvujRp2dKG8q3zILtSZ8L0O9GjqGI3iwT1Ro1CTixPQ2A==
 
-"@trpc/server@11.0.0-rc.818":
-  version "11.0.0-rc.818"
-  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-11.0.0-rc.818.tgz#82f76d4821ae720403db2f2506d83e438710b6b0"
-  integrity sha512-twsIO3aGJwi4HTM00Oz4ey738zQ9wff4J/hjZt05/S6j/l2T6KB8Hzjb3nolYIRFaZ2x1siTBH6SEoeiRpdY2w==
+"@trpc/server@11.0.0-rc.819":
+  version "11.0.0-rc.819"
+  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-11.0.0-rc.819.tgz#c91f32d511455f476e585412dac3f3213a552e9c"
+  integrity sha512-KPkFEdsgXQeJux3bHMA8ahYOnXZBZIDBUeqAtZrQtFoIein/JNQQIuaAlA4UowWYBjEl1+fpWQwLYWCRPhL0OQ==
 
 "@types/debug@^4.0.0":
   version "4.1.12"
