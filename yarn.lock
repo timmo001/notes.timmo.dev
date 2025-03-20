@@ -21,44 +21,44 @@
   dependencies:
     "@egjs/component" "^3.0.2"
 
-"@clerk/backend@^1.25.2":
-  version "1.25.2"
-  resolved "https://registry.yarnpkg.com/@clerk/backend/-/backend-1.25.2.tgz#4fdd2f1d99493b710c7416ff71186922b4462670"
-  integrity sha512-habBg77Nss4xhN+hvw3pbNxjRdEdKIUINpLRo2kHrvg7ZcKIux+75H283yQPE728hTwaKGxUnIEISgH4NLjeQw==
+"@clerk/backend@^1.25.3":
+  version "1.25.3"
+  resolved "https://registry.yarnpkg.com/@clerk/backend/-/backend-1.25.3.tgz#df6f082e69aa9acef84cbe4cdf97776f1dbf1f8f"
+  integrity sha512-UakIGrxZzTIL7CWX8/RiWNlskKzkcW2dXifO+yUy6kefUlo0m6qRIx6WL/REzyCrbUMo+GfcQJnROiYsw9Uraw==
   dependencies:
-    "@clerk/shared" "^3.0.1"
-    "@clerk/types" "^4.48.0"
+    "@clerk/shared" "^3.0.2"
+    "@clerk/types" "^4.49.0"
     cookie "1.0.2"
     snakecase-keys "8.0.1"
-    tslib "2.4.1"
+    tslib "2.8.1"
 
-"@clerk/clerk-react@^5.24.2":
-  version "5.24.2"
-  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-5.24.2.tgz#e5e147cd8a1402e4c6bb2515c9f39abadbb9a738"
-  integrity sha512-gWYhuC8K4GOw+jtYEEs4y7ypT6W6Pk3SkxPwW8GXtrBvqGyJKapq+d2EHFYMZvQCnFKAW4hE+nsTyy7NqP9RJg==
+"@clerk/clerk-react@^5.25.0":
+  version "5.25.0"
+  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-5.25.0.tgz#e46376366b8fd770716e874571929e4bfc809031"
+  integrity sha512-WxQuiQVb9+phg5cO5HXiTnuUGY04pmKmKT1fJwLB7TMptb7QaV0oLelhGXDY2MnHb8ODzMPdhaHOlll9Kb6CLw==
   dependencies:
-    "@clerk/shared" "^3.0.1"
-    "@clerk/types" "^4.48.0"
-    tslib "2.4.1"
+    "@clerk/shared" "^3.0.2"
+    "@clerk/types" "^4.49.0"
+    tslib "2.8.1"
 
-"@clerk/nextjs@6.12.5":
-  version "6.12.5"
-  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-6.12.5.tgz#ac1b8b9ecee0c10e79b44fa52158b35be6eea2e3"
-  integrity sha512-MhpQRMHG9g7SzrhWQP/8BtgZ+Z59txyoxkesQOKOO6/LmKAU6YIQDMMjdJmQk/xNACkJIOqz0m5yOEueJzkq1g==
+"@clerk/nextjs@6.12.6":
+  version "6.12.6"
+  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-6.12.6.tgz#8c982434893d31e317b07ca82755c55245f7cf11"
+  integrity sha512-u2vY2bvoEYN2qD80zyCQ0sdUyjUIsXRMTDKpIX+Dbf/id+MLgZyO95EjblZ/TkvS72Fjbf+KTQjSXve7erDpJw==
   dependencies:
-    "@clerk/backend" "^1.25.2"
-    "@clerk/clerk-react" "^5.24.2"
-    "@clerk/shared" "^3.0.1"
-    "@clerk/types" "^4.48.0"
+    "@clerk/backend" "^1.25.3"
+    "@clerk/clerk-react" "^5.25.0"
+    "@clerk/shared" "^3.0.2"
+    "@clerk/types" "^4.49.0"
     server-only "0.0.1"
-    tslib "2.4.1"
+    tslib "2.8.1"
 
-"@clerk/shared@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@clerk/shared/-/shared-3.0.1.tgz#857e584b44460eb4e5388c2d31b6822a8efca64a"
-  integrity sha512-WGyzVQuwAr8/P4fhMGq8G4IVKxXZtPEVe6RVE9EEMjAHtD77MF9Bu/0Dfb8jHYeyHOGsJm73I7aaDbgDZDkJzw==
+"@clerk/shared@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@clerk/shared/-/shared-3.0.2.tgz#1c7798440a8b33384ac42dbb4b5b1d2ee5435df5"
+  integrity sha512-d18X5GX70BLAZsJj6VkIjinnkht2Q/TJbhJbTlXZTvs7VOTax6mst5xaIXuS2EX8i/lyejbKg4j2whW7iAW4wA==
   dependencies:
-    "@clerk/types" "^4.48.0"
+    "@clerk/types" "^4.49.0"
     dequal "2.0.3"
     glob-to-regexp "0.4.1"
     js-cookie "3.0.5"
@@ -73,10 +73,10 @@
     "@clerk/types" "^4.48.0"
     tslib "2.4.1"
 
-"@clerk/types@^4.48.0":
-  version "4.48.0"
-  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-4.48.0.tgz#1a26e33b851998c0eb28cfd63e842a4e47120393"
-  integrity sha512-zuWeEMxgtuxLKQCnzioSwuCFJVk1rVO+rXFhD8aBcyvBH6fadGp4IZzh7/Ov1HRiqpku5xPc010uubgC7jXMeQ==
+"@clerk/types@^4.48.0", "@clerk/types@^4.49.0":
+  version "4.49.0"
+  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-4.49.0.tgz#236b78ae42418fcf440c3c7d52d18fc1233af6a9"
+  integrity sha512-ps/hKza4BS1VYuAjCVgALwmJ5xWYDJapxS1Zj4uBjiJRsZovofNznekKwHNIeaicAZZa0Emi+TranGuAam+9kw==
   dependencies:
     csstype "3.1.3"
 
@@ -4976,10 +4976,15 @@ tsconfig-paths@^3.15.0:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tslib@2.4.1, tslib@^2.0.0, tslib@^2.0.3, tslib@^2.1.0, tslib@^2.4.0:
+tslib@2.4.1:
   version "2.4.1"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.4.1.tgz"
   integrity sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==
+
+tslib@2.8.1, tslib@^2.0.0, tslib@^2.0.3, tslib@^2.1.0, tslib@^2.4.0:
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.8.1.tgz#612efe4ed235d567e8aba5f2a5fab70280ade83f"
+  integrity sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==
 
 tunnel-rat@^0.1.2:
   version "0.1.2"
