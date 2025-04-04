@@ -21,49 +21,49 @@
   dependencies:
     "@egjs/component" "^3.0.2"
 
-"@clerk/backend@^1.25.8":
-  version "1.25.8"
-  resolved "https://registry.yarnpkg.com/@clerk/backend/-/backend-1.25.8.tgz#db270e0b33d33d493d47330ee5ebc0b22642afff"
-  integrity sha512-DmIc5pNQeTLHLCLN8ajcNhYNCfqmvwSwyGqr5aCHiJdWqGb9DGaws7PXU9btBiXVbI+NK/CJwjGv09+2rGpgAg==
+"@clerk/backend@^1.26.0":
+  version "1.26.0"
+  resolved "https://registry.yarnpkg.com/@clerk/backend/-/backend-1.26.0.tgz#2bd2d5264b7e9b69a8b9a7666ba5e1f1e2365081"
+  integrity sha512-ioZBMnwm4DD8IVPGDjFW3wkyn1JTMvTlsmdHGYsjdbXLtbRFVRJelAIMMGLcSmqMgzTKxnrJSOz8PxPjSMUFtw==
   dependencies:
-    "@clerk/shared" "^3.2.3"
-    "@clerk/types" "^4.50.1"
+    "@clerk/shared" "^3.3.0"
+    "@clerk/types" "^4.50.2"
     cookie "1.0.2"
     snakecase-keys "8.0.1"
     tslib "2.8.1"
 
-"@clerk/clerk-react@^5.25.5":
-  version "5.25.5"
-  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-5.25.5.tgz#3ede4e56bf516fce931fd85197ad12221b799ec9"
-  integrity sha512-euG4T9EaN4af4YH7N8Fl6hIKnXQl+KSZv1WTLgD4KP90hSpVTMPkhdWeOiRFpNQ5I6WwtkaUPY16nce5y/NTQA==
+"@clerk/clerk-react@^5.25.6":
+  version "5.25.6"
+  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-5.25.6.tgz#e2a22733763ecd0c1ac8cc1c00a02fc9b0ce44c0"
+  integrity sha512-QXISFiW4xI96nIE8MEfqpy+ISjtfYa2wWYeS8Nyo+K34dK1aNpawpTopRKRirqUy2QRSF/yXaCY9IF/v22XlJg==
   dependencies:
-    "@clerk/shared" "^3.2.3"
-    "@clerk/types" "^4.50.1"
+    "@clerk/shared" "^3.3.0"
+    "@clerk/types" "^4.50.2"
     tslib "2.8.1"
 
-"@clerk/nextjs@6.12.12":
-  version "6.12.12"
-  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-6.12.12.tgz#08d969c0d0744d790eea527bc2c750e5ddd99e4f"
-  integrity sha512-V1Vb1a5pTZArNrCy/YvpXCFQZsrRb54G+crzZ55kiuqvPaVGPguEoSCqjoaJ1RolyagXMhLKvht3Te6DYMSZEg==
+"@clerk/nextjs@6.13.0":
+  version "6.13.0"
+  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-6.13.0.tgz#2b61acc9e40d47666cfaa24c9d26e57cca81a28d"
+  integrity sha512-xikvFU8JWBtbgh3pe76yWrlOQzIACdUNsinHP06qeRJIIg8yci8sYa93ASjd0TNPzj9cInF+owMj6mDQw7HZ5Q==
   dependencies:
-    "@clerk/backend" "^1.25.8"
-    "@clerk/clerk-react" "^5.25.5"
-    "@clerk/shared" "^3.2.3"
-    "@clerk/types" "^4.50.1"
+    "@clerk/backend" "^1.26.0"
+    "@clerk/clerk-react" "^5.25.6"
+    "@clerk/shared" "^3.3.0"
+    "@clerk/types" "^4.50.2"
     server-only "0.0.1"
     tslib "2.8.1"
 
-"@clerk/shared@^3.2.3":
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/@clerk/shared/-/shared-3.2.3.tgz#50bd6c61516463b17ad8602be93dfc57d2fc6f98"
-  integrity sha512-F8P7SqpcaLTV/wwCB3/1AkboO3YqFjb7qS6GoSDtVTFHMfpHJgHKhZ0vUBQFaLh/8ZV1kyRuiI/hrrbwIOF1EQ==
+"@clerk/shared@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@clerk/shared/-/shared-3.3.0.tgz#fa7b47f13eddc5754995d7a655f8b03e090dd85d"
+  integrity sha512-hO1M5aRMzJVqkw6lWJ7NFVG5hWEnTZBUZGeHMYRwSPQzQNsgqsRMvpmaJO0Y2o0HNk50PpwZHaiFHcghUpfMiw==
   dependencies:
-    "@clerk/types" "^4.50.1"
+    "@clerk/types" "^4.50.2"
     dequal "2.0.3"
     glob-to-regexp "0.4.1"
     js-cookie "3.0.5"
-    std-env "^3.7.0"
-    swr "^2.2.0"
+    std-env "^3.8.1"
+    swr "^2.3.3"
 
 "@clerk/themes@2.2.26":
   version "2.2.26"
@@ -73,10 +73,10 @@
     "@clerk/types" "^4.50.1"
     tslib "2.8.1"
 
-"@clerk/types@^4.50.1":
-  version "4.50.1"
-  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-4.50.1.tgz#15995156bf12617c0c234f34c332cdc65bc0eee9"
-  integrity sha512-GwsW/6LPHavHghh2QpmDbhyIuDP61OYV0T6x5hnjgAxjfexpRymbewR7Qez7H4kOo4gtnCNUrgTZ6nyresLEEg==
+"@clerk/types@^4.50.1", "@clerk/types@^4.50.2":
+  version "4.50.2"
+  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-4.50.2.tgz#09a5aca27fa3bf1898bb247de44a05dbe2445659"
+  integrity sha512-4m1RlV/Dl3ZGW5FAXmKfdCbhF7uTDDvaADZH1F6L3d3lRBdI6i7GppK1KqscOSgoC8OwJqGaiDVUPsg+Pp8usg==
   dependencies:
     csstype "3.1.3"
 
@@ -2110,7 +2110,7 @@ define-properties@^1.1.3, define-properties@^1.2.0, define-properties@^1.2.1:
     has-property-descriptors "^1.0.0"
     object-keys "^1.1.1"
 
-dequal@2.0.3, dequal@^2.0.0:
+dequal@2.0.3, dequal@^2.0.0, dequal@^2.0.3:
   version "2.0.3"
   resolved "https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz"
   integrity sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==
@@ -4670,10 +4670,10 @@ space-separated-tokens@^2.0.0:
   resolved "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-2.0.2.tgz"
   integrity sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==
 
-std-env@^3.7.0:
-  version "3.7.0"
-  resolved "https://registry.npmjs.org/std-env/-/std-env-3.7.0.tgz"
-  integrity sha512-JPbdCEQLj1w5GilpiHAx3qJvFndqybBysA3qUOnznweH4QbNYUsW/ea8QzSrnh0vNsezMMw5bcVool8lM0gwzg==
+std-env@^3.8.1:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.9.0.tgz#1a6f7243b339dca4c9fd55e1c7504c77ef23e8f1"
+  integrity sha512-UGvjygr6F6tpH7o2qyqR6QYpwraIjKSdtzyBdyytFOHmPZY917kwdwLG0RbOjWOnKmnm3PeHjaoLLMie7kPLQw==
 
 streamsearch@^1.1.0:
   version "1.1.0"
@@ -4847,13 +4847,21 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-swr@^2.2.0, swr@^2.2.4:
+swr@^2.2.4:
   version "2.2.5"
   resolved "https://registry.npmjs.org/swr/-/swr-2.2.5.tgz"
   integrity sha512-QtxqyclFeAsxEUeZIYmsaQ0UjimSq1RZ9Un7I68/0ClKK/U3LoyQunwkQfJZr2fc22DfIXLNDc2wFyTEikCUpg==
   dependencies:
     client-only "^0.0.1"
     use-sync-external-store "^1.2.0"
+
+swr@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/swr/-/swr-2.3.3.tgz#9d6a703355f15f9099f45114db3ef75764444788"
+  integrity sha512-dshNvs3ExOqtZ6kJBaAsabhPdHyeY4P2cKwRCniDVifBMoG/SVI7tfLWqPXriVspf2Rg4tPzXJTnwaihIeFw2A==
+  dependencies:
+    dequal "^2.0.3"
+    use-sync-external-store "^1.4.0"
 
 tailwind-merge@3.1.0:
   version "3.1.0"
@@ -5179,6 +5187,11 @@ use-sync-external-store@1.2.2, use-sync-external-store@^1.2.0, use-sync-external
   version "1.2.2"
   resolved "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.2.2.tgz"
   integrity sha512-PElTlVMwpblvbNqQ82d2n6RjStvdSoNe9FG28kNfz3WiXilJm4DdNkEzRhCZuIDwY8U08WVihhGR5iRqAwfDiw==
+
+use-sync-external-store@^1.4.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.5.0.tgz#55122e2a3edd2a6c106174c27485e0fd59bcfca0"
+  integrity sha512-Rb46I4cGGVBmjamjphe8L/UnvJD+uPPtTkNvX5mZgqdbavhI4EbgIWJiIHXJ8bc/i9EQGPRh4DwEURJ552Do0A==
 
 util-deprecate@^1.0.2:
   version "1.0.2"
