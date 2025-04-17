@@ -14,7 +14,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@clerk/nextjs": "6.15.0",
+    "@clerk/nextjs": "6.15.1",
     "@clerk/themes": "2.2.31",
     "@hookform/resolvers": "5.0.1",
     "@radix-ui/react-alert-dialog": "^1.1.7",
