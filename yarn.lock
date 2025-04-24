@@ -21,48 +21,48 @@
   dependencies:
     "@egjs/component" "^3.0.2"
 
-"@clerk/backend@^1.29.2":
-  version "1.29.2"
-  resolved "https://registry.yarnpkg.com/@clerk/backend/-/backend-1.29.2.tgz#4f838469fb5448e6a0b45607f6fd64e000a3cb52"
-  integrity sha512-mBvGyHjNj/t2X2y0Dn1V1EgsffhgNH1TJhB98k40dHxVxvosY9QdgCDMtru/Q1uZ7EXNOzYqzcB5FzAKCxFRZw==
+"@clerk/backend@^1.30.0":
+  version "1.30.0"
+  resolved "https://registry.yarnpkg.com/@clerk/backend/-/backend-1.30.0.tgz#a4b7d406b5a87a9e3a3a70590bf8ef20bfd45ad6"
+  integrity sha512-VB8a0jbfb5eiHENCT9ts8ISozUbKOcREj2rXQaYcOhEQ1EzO6Jng1Pb0nRR4RojsAvPe9XGMQrA4FufHp+dUWQ==
   dependencies:
-    "@clerk/shared" "^3.7.3"
-    "@clerk/types" "^4.55.0"
+    "@clerk/shared" "^3.7.4"
+    "@clerk/types" "^4.55.1"
     cookie "1.0.2"
     snakecase-keys "8.0.1"
     tslib "2.8.1"
 
-"@clerk/clerk-react@^5.29.0":
-  version "5.29.0"
-  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-5.29.0.tgz#25662d68474790ab8d5b400dbccf52c70807db32"
-  integrity sha512-S8wenyl5R/8YmUT1tElQZdmHe/MASM9JDJRKqhy0kVYXdKzjhuwTBgT+m3hXl3zdq/Gwi3hgv7pRnQWpQisutQ==
+"@clerk/clerk-react@^5.30.0":
+  version "5.30.0"
+  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-5.30.0.tgz#c186e890c74049f03dc26b81d2703baa022afd7a"
+  integrity sha512-ruC8I31wu5vpYFTZ5Qj+avZwHbyzmhY6fatV6EzYMCIu7tOgDK5Af92gerfJ5drbRTL+NM4tDPmSNXiMIdS/nw==
   dependencies:
-    "@clerk/shared" "^3.7.3"
-    "@clerk/types" "^4.55.0"
+    "@clerk/shared" "^3.7.4"
+    "@clerk/types" "^4.55.1"
     tslib "2.8.1"
 
-"@clerk/nextjs@6.17.0":
-  version "6.17.0"
-  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-6.17.0.tgz#55a6f77bfe359467b42d54ec452320cbe20994ca"
-  integrity sha512-ik+UU/cKZgC5pafJJ9oct0BUHvytUqof+r1RjFb71xU1TM7EOeL5XYafVxh+hlgwsE4jmrw+FVYe4DXDcyPeTQ==
+"@clerk/nextjs@6.18.0":
+  version "6.18.0"
+  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-6.18.0.tgz#62f394945a2945e90409f785fa9b6548b30d4f41"
+  integrity sha512-7cWFserYByK65eSX7eCyGXHlDb3ejNTyf3O8nHc4DgDLHjZn5dJA+6J0Hz1XSgUATOCSbnmkKSy1iekNMvSnYA==
   dependencies:
-    "@clerk/backend" "^1.29.2"
-    "@clerk/clerk-react" "^5.29.0"
-    "@clerk/shared" "^3.7.3"
-    "@clerk/types" "^4.55.0"
+    "@clerk/backend" "^1.30.0"
+    "@clerk/clerk-react" "^5.30.0"
+    "@clerk/shared" "^3.7.4"
+    "@clerk/types" "^4.55.1"
     server-only "0.0.1"
     tslib "2.8.1"
 
-"@clerk/shared@^3.7.3":
-  version "3.7.3"
-  resolved "https://registry.yarnpkg.com/@clerk/shared/-/shared-3.7.3.tgz#5c8a1d65149a364d38a7f762c9078af0fd06c410"
-  integrity sha512-IMpz1bgZZzlxNLyFliE0GrA3NT1Wgidl2CBORkE2S/YUSCH4ge8EPg5tfQq9Ja6d17TfarkzEafrm1b/BHxSWg==
+"@clerk/shared@^3.7.4":
+  version "3.7.4"
+  resolved "https://registry.yarnpkg.com/@clerk/shared/-/shared-3.7.4.tgz#0f901d1eee736f7a2140a7fb87360f472afbe765"
+  integrity sha512-Ua6MyDyXjkfrV4h7ftC5LUsz7YL+0athsiNuMUyYjE3x8r/vmJzhLjZJ7C2C3KhDq2XnMWud0iQ7SGRTop+9WQ==
   dependencies:
-    "@clerk/types" "^4.55.0"
+    "@clerk/types" "^4.55.1"
     dequal "2.0.3"
     glob-to-regexp "0.4.1"
     js-cookie "3.0.5"
-    std-env "^3.8.1"
+    std-env "^3.9.0"
     swr "^2.3.3"
 
 "@clerk/themes@2.2.35":
@@ -73,10 +73,10 @@
     "@clerk/types" "^4.55.0"
     tslib "2.8.1"
 
-"@clerk/types@^4.55.0":
-  version "4.55.0"
-  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-4.55.0.tgz#35876ba4e889b0b80fa20cd43f39e5ee5978be31"
-  integrity sha512-MJc/zo9vJOq1mY37RbRjrZ883AKe9gitlYFyVB3R+ChKm0uBl2Mm8R2gkYy1GGKYvqBm27GJooWHxdcM1Yv1eQ==
+"@clerk/types@^4.55.0", "@clerk/types@^4.55.1":
+  version "4.55.1"
+  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-4.55.1.tgz#6b0c78695feea9e92f37ce873b7642d1e495c2a5"
+  integrity sha512-BS/shDMWfQ7M8Jlms/RJFH20N8cK1EfAWKTpiIiICFi5e/5H0gpaaWx277x341GQz4gZzVDPGdF+EhoknYOrWQ==
   dependencies:
     csstype "3.1.3"
 
@@ -4687,7 +4687,7 @@ space-separated-tokens@^2.0.0:
   resolved "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-2.0.2.tgz"
   integrity sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==
 
-std-env@^3.8.1:
+std-env@^3.9.0:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.9.0.tgz#1a6f7243b339dca4c9fd55e1c7504c77ef23e8f1"
   integrity sha512-UGvjygr6F6tpH7o2qyqR6QYpwraIjKSdtzyBdyytFOHmPZY917kwdwLG0RbOjWOnKmnm3PeHjaoLLMie7kPLQw==
