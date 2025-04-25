@@ -1501,7 +1501,7 @@
   dependencies:
     undici-types "~6.21.0"
 
-"@types/prop-types@*", "@types/prop-types@^15.0.0":
+"@types/prop-types@^15.0.0":
   version "15.7.12"
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.12.tgz"
   integrity sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==
@@ -1513,12 +1513,11 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@18.3.13":
-  version "18.3.13"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.3.13.tgz#84c9690d9a271f548659760754ea8745701bfd82"
-  integrity sha512-ii/gswMmOievxAJed4PAHT949bpYjPKXvXo1v6cRB/kqc2ZR4n+SgyCyvyc5Fec5ez8VnUumI1Vk7j6fRyRogg==
+"@types/react@*", "@types/react@19.1.2":
+  version "19.1.2"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.1.2.tgz#11df86f66f188f212c90ecb537327ec68bfd593f"
+  integrity sha512-oxLPMytKchWGbnQM9O7D67uPa9paTNxO7jVoNMXgkkErULBPhPARCfkKL9ytcIJJRGjbsVwW4ugJzyFFvm/Tiw==
   dependencies:
-    "@types/prop-types" "*"
     csstype "^3.0.2"
 
 "@types/unist@^2", "@types/unist@^2.0.0":
@@ -4416,12 +4415,10 @@ react-tweet@^3.2.1:
     clsx "^2.0.0"
     swr "^2.2.4"
 
-react@18.3.1:
-  version "18.3.1"
-  resolved "https://registry.npmjs.org/react/-/react-18.3.1.tgz"
-  integrity sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==
-  dependencies:
-    loose-envify "^1.1.0"
+react@19.1.0:
+  version "19.1.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-19.1.0.tgz#926864b6c48da7627f004795d6cce50e90793b75"
+  integrity sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==
 
 read-cache@^1.0.0:
   version "1.0.0"
