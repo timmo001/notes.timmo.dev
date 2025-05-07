@@ -2789,10 +2789,10 @@ functions-have-names@^1.2.3:
   resolved "https://registry.npmjs.org/functions-have-names/-/functions-have-names-1.2.3.tgz"
   integrity sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==
 
-geist@1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/geist/-/geist-1.4.1.tgz#9e22fa9b6523b6023a3ddeb01b7f90eb0a93eed3"
-  integrity sha512-uyVD2rGwXoGNqr+SfXzz3eL2h6zDG72d6vPbfm6u2BEfk8WT23BC1lxSwAV/FIFezPkTutAw00MQ0at5W+5olA==
+geist@1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/geist/-/geist-1.4.2.tgz#345a0a72681c7c75c5392e5810d4537d3d4d93b7"
+  integrity sha512-OQUga/KUc8ueijck6EbtT07L4tZ5+TZgjw8PyWfxo16sL5FWk7gNViPNU8hgCFjy6bJi9yuTP+CRpywzaGN8zw==
 
 gesto@^1.19.3, gesto@^1.19.4:
   version "1.19.4"
