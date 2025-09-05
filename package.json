@@ -39,7 +39,7 @@
     "dayjs": "1.11.18",
     "drizzle-orm": "0.44.5",
     "framer-motion": "12.23.12",
-    "geist": "1.4.2",
+    "geist": "1.5.1",
     "lucide-react": "0.542.0",
     "next": "14.2.30",
     "next-themes": "0.3.0",
