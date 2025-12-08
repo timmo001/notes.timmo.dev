@@ -191,7 +191,7 @@
     server-only "0.0.1"
     tslib "2.8.1"
 
-"@clerk/shared@^3.37.0", "@clerk/shared@^3.38.0":
+"@clerk/shared@^3.38.0":
   version "3.38.0"
   resolved "https://registry.yarnpkg.com/@clerk/shared/-/shared-3.38.0.tgz#088623cda7045c9e4c4bc72a580b4e5c8560b633"
   integrity sha512-9R63kyHXq4DntdQXWxwpFZSq04AR8rby0cqAnUfTsAddyxQOmyjgHZADKkrMYUbhGiJnLBysUmZBPyVizjaopg==
@@ -203,12 +203,12 @@
     std-env "^3.9.0"
     swr "2.3.4"
 
-"@clerk/themes@2.4.41":
-  version "2.4.41"
-  resolved "https://registry.yarnpkg.com/@clerk/themes/-/themes-2.4.41.tgz#891d44cc83dfae4f925b3c120b0daa4819b7b40a"
-  integrity sha512-Ut2L6gxgs8+BeWEsJJpXR/v2gD2i+qbkSI3V8+3S4Z923P7duonX4973EDzuR66I+PEgFUJr73uG2bDwF/DPJg==
+"@clerk/themes@2.4.42":
+  version "2.4.42"
+  resolved "https://registry.yarnpkg.com/@clerk/themes/-/themes-2.4.42.tgz#71bbe11a7e2dd9a2391d1668442cd7419d4ce17a"
+  integrity sha512-jKsX82ZefeBZDIpolfXK4NkZM0YmwtlgHKJtEhHprBeO9ZaxW781ydhY9D84YuFeTP7+CE3WKLgOKj3Ar0pJlw==
   dependencies:
-    "@clerk/shared" "^3.37.0"
+    "@clerk/shared" "^3.38.0"
     tslib "2.8.1"
 
 "@clerk/types@^4.101.5":
