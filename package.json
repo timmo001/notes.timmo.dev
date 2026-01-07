@@ -38,7 +38,7 @@
     "cmdk": "1.1.1",
     "dayjs": "1.11.19",
     "drizzle-orm": "0.45.1",
-    "framer-motion": "12.23.26",
+    "framer-motion": "12.24.7",
     "geist": "1.5.1",
     "lucide-react": "0.560.0",
     "next": "14.2.30",
